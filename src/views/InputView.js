@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { createScope, map, transformProxies } from './helpers'
+import AudioInputComponent from './AudioInputComponent';
 
 const scripts = [
   { loading: fetch("https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6526603ca6ecfaa934a69294").then(body => body.text()), isAsync: false },
@@ -206,6 +207,9 @@ class InputView extends React.Component {
                           <div className="af-class-margin-bottom af-class-margin-small">
                             <h1>Upload Your Voice File</h1>
                           </div>
+                          <div>
+                            <AudioInputComponent />
+                          </div>
                           <p className="af-class-text-size-medium">Accepted formats: <br />MP3, WAV, FLAC, AAC</p>
                           <div className="w-form">
                             <form id="email-form-3" name="email-form-3" data-name="Email Form 3" method="get" data-wf-page-id="6527ec791dad3c4809c77288" data-wf-element-id="63dbe20c-098b-7589-0d64-f8c1cb86eaab"><input type="text" className="af-class-text-field-3 w-input" maxLength={256} name="field-2" data-name="Field 2" placeholder="Example Text" role="uploadcare-uploader" id="field-2" required /></form>
@@ -378,5 +382,4 @@ class InputView extends React.Component {
 }
 
 export default InputView
-
 /* eslint-enable */
