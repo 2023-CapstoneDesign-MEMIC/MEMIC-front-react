@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { createScope, map, transformProxies } from './helpers'
-
+import AudioRecorder from './AudioRecorder'
 const scripts = [
   { loading: fetch("https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6526603ca6ecfaa934a69294").then(body => body.text()), isAsync: false },
   { loading: fetch("js/webflow.js").then(body => body.text()), isAsync: false },
@@ -209,9 +209,9 @@ class RecordView extends React.Component {
                           <p className="af-class-text-size-medium"><span className="af-class-text-span">Show your vocal imitation skills </span></p>
                           <div className="af-class-margin-top af-class-margin-medium">
                             <div className="af-class-record-your-voice_cta-form_form-block w-form">
-                              <form id="email-form" name="email-form" data-name="Email Form" method="get" className="af-class-record-your-voice_cta-form_form" data-wf-page-id="6527f97472edb9377a2f5b7d" data-wf-element-id="226a7df9-e784-9a20-29ca-8636e212d374">
-                                <div className="af-class-signup-form-wrapper"><input type="text" className="af-class-form-input w-input" maxLength={256} name="Sample" data-name="Sample" placeholder="This is a sample part" id="Sample" required /><input type="submit" defaultValue="Record" data-wait="Please wait..." className="af-class-button w-button" /></div>
-                              </form>
+                              <div>
+                                <AudioRecorder />
+                              </div>
                               <div className="af-class-success-message w-form-done">
                                 <div className="af-class-success-text">Thank you! Submission received.</div>
                               </div>

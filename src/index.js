@@ -25,7 +25,6 @@ ReactDOM.render(
             <Route path="/faqs.html" element={<FaqsView />} />
             <Route path="/401.html" element={<UnauthorizedView />} />
             <Route path="/404.html" element={<NotFoundView />} />
-
         </Routes>
     </BrowserRouter>
 , document.getElementById('root'));
