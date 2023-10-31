@@ -14,7 +14,7 @@ const AudioInputComponent = () => {
       // 서버로 파일 제출하는 로직을 여기에 구현합니다.
       // 예: axios.post('/api/upload', formData);
       // 파일 제출 후 RecordView 페이지로 이동
-      navigate('/record');
+      //navigate('/record.html');
     } else {
       alert('오디오 파일을 선택해주세요.');
     }

@@ -3,6 +3,7 @@
 import React from 'react'
 import { createScope, map, transformProxies } from './helpers'
 import AudioInputComponent from './AudioInputComponent';
+import YoutubeInputComponent from './YoutubeInputComponent';
 
 const scripts = [
   { loading: fetch("https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6526603ca6ecfaa934a69294").then(body => body.text()), isAsync: false },
@@ -260,10 +261,11 @@ class InputView extends React.Component {
                               <p className="af-class-text-size-medium af-class-text-color-white">If you enter YouTube URL and timeline, ME:MIC extract a voice file!</p>
                               <div className="af-class-margin-top af-class-margin-medium">
                                 <div className="af-class-cta28_form-block w-form">
-                                  <form id="email-form" name="email-form" data-name="Email Form" method="get" className="af-class-cta28_form" data-wf-page-id="6527ec791dad3c4809c77288" data-wf-element-id="1b6d5fe7-42c1-7550-4220-f7700618fa83">
-                                    <div className="af-class-signup-form-wrapper"><input type="email" className="af-class-form-input w-input" maxLength={256} name="URL" data-name="URL" placeholder="Enter your Youtube URL" id="URL" required /><input type="submit" defaultValue="Extract" data-wait="Please wait..." className="af-class-button w-button" /></div>
-                                    <div className="af-class-text-size-tiny af-class-text-color-white">Please imitate your vocal cords as closely as possible.</div>
-                                  </form>
+                                  <div>
+                                      <YoutubeInputComponent />
+                                  </div>
+                                  <div className="af-class-text-size-tiny af-class-text-color-white">Please imitate your vocal cords as closely as possible.</div>
+
                                   <div className="af-class-success-message w-form-done">
                                     <div className="af-class-success-text">Thank you! Your submission was successful!</div>
                                   </div>
