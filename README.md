@@ -1,13 +1,24 @@
+## 연동 방법
+
+
+### django side
 ```
+pip install djangorestframework
+pip install django-cors-headers
+#   'django.middleware.csrf.CsrfViewMiddleware',
+
+python manage.py runserver
+```
+
+### react side
+
+```
+npm install axios
 npm start
 ```
 
 ### 할 것
 
-각 페이지 깨짐 수정
+각 페이지 깨지는 UI 수정
 
-
-그래서 연동 어떻게 함
-
-
-결과물 출력
+피드백 출력
