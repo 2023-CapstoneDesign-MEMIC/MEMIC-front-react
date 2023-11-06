@@ -1,0 +1,52 @@
+.AudioRecorder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #232526;  /* Dark background */
+  background-image: linear-gradient(to right, #232526, #414345);  /* Gradient background */
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 50px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.AudioRecorder-button {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 400; /* 기본 글씨 두께 */
+  color: #000000; /* 기본 글씨 색상 */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: background-color 0.3s, color 0.3s, font-weight 0.3s; /* 변화에 애니메이션 효과 추가 */
+}
+
+.AudioRecorder-button:hover {
+  background-color: #000000;
+  color: #ffffff; /* 마우스 올렸을 때 글씨 색상 */
+  font-weight: 600; /* 마우스 올렸을 때 글씨 두께 */
+}
+
+
+
+.AudioRecorder-audio {
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.AudioRecorder-confirmation {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #16a085;
+  color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

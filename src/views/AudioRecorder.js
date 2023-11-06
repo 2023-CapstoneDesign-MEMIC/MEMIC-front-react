@@ -1,4 +1,6 @@
 import React, { useState, useRef } from 'react';
+import axios from 'axios';
+import './AudioRecorder.css';
 
 const AudioRecorder = () => {
   const [isRecording, setIsRecording] = useState(false);
@@ -35,32 +37,63 @@ const AudioRecorder = () => {
     }
   };
 
-  const submitRecording = () => {
-    // 백엔드로 녹음 파일을 제출하는 로직
-    console.log('Submitting the recording...');
-    setIsSubmitted(true);
+  const submitRecording = async () => {
+    if (!audioURL) {
+      alert('Please record an audio first.');
+      return;
+    }
+
+    try {
+      const audioBlob = await fetch(audioURL).then(r => r.blob());
+      const formData = new FormData();
+      formData.append('audio_file', audioBlob, 'recording.mp3');
+
+      const response = await axios.post('http://127.0.0.1:8000/record/', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+
+      if (response.status === 201) {
+        console.log('Submitted the recording:', response.data);
+        setIsSubmitted(true);
+      }
+    } catch (error) {
+      console.error('There was an error submitting the recording:', error);
+    }
   };
 
   return (
-    <div>
+    <div className="AudioRecorder">
       {!isSubmitted && (
         <>
-          <button onClick={isRecording ? stopRecording : startRecording}>
+          <button
+            onClick={isRecording ? stopRecording : startRecording}
+            className="AudioRecorder-button"
+          >
             {isRecording ? 'Stop Recording' : hasRecorded ? 'Re-Recording' : 'Start Recording'}
           </button>
           {audioURL && (
             <>
-              <audio src={audioURL} controls />
-              <button onClick={submitRecording}>Submit Recording</button>
+              <audio src={audioURL} controls className="AudioRecorder-audio" />
+              <button
+                onClick={submitRecording}
+                className="AudioRecorder-button"
+              >
+                Submit Recording
+              </button>
             </>
           )}
         </>
       )}
       {isSubmitted && (
-        <p style={{ color: 'green' }}>Your recording has been submitted. <br/> Now let’s move on to the result report page!</p>
+        <p className="AudioRecorder-confirmation">
+          Your recording has been submitted. <br/> Now let’s move on to the result report page!
+        </p>
       )}
     </div>
   );
 };
+
 
 export default AudioRecorder;
