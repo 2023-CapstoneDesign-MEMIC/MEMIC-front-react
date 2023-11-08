@@ -1524,21 +1524,22 @@
 
 .af-view .af-class-navbar12_dropdown-list.w--open {
   width: 40rem;
-  border: 1px solid var(--black);
-  background-color: var(--white);
+  border: 1px solid #000000;
+  background-color: #ffffff;
   padding: 1.5rem;
   right: -100%;
+  border-radius: 10px;
 }
 
 .af-view .af-class-navbar12_component {
   width: 100%;
   min-height: 4.5rem;
-  border-bottom: 1px solid var(--black);
   background-color: var(--white);
   align-items: center;
   padding-left: 5%;
   padding-right: 5%;
   display: flex;
+  border-bottom: 2px solid #000;
 }
 
 .af-view .af-class-home_feature_component {

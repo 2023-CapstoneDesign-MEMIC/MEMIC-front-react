@@ -79,9 +79,9 @@ class InputView extends React.Component {
             <div className="af-class-page-wrapper">
               <main className="af-class-main-wrapper">
                 <section className="af-class-section_upload-voice-file-or-input-youtube-url-link-with-timeline_1_cta-form">
-                  <div data-animation="default" className="af-class-navbar12_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="d9812076-6b1d-1530-a77a-30bd6a45045a" role="banner" data-duration={400} id="nav_bar" style={{ borderBottom: '2px solid #000' }}>
+                  <div data-animation="default" className="af-class-navbar12_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="d9812076-6b1d-1530-a77a-30bd6a45045a" role="banner" data-duration={400} id="nav_bar">
                     <div className="af-class-navbar12_container">
-                      <a href="input.html" className="af-class-navbar12_logo-link w-nav-brand"><img src="images/logo.png" loading="lazy" width={42} alt="logo for navbar
+                      <a href="fileupload" className="af-class-navbar12_logo-link w-nav-brand"><img src="images/logo.png" loading="lazy" width={42} alt="logo for navbar
         " className="af-class-navbar12_logo" /></a>
                       <div className="af-class-navbar12_menu-button w-nav-button">
                         <address className="af-class-menu-icon1">
@@ -103,10 +103,9 @@ class InputView extends React.Component {
                               </svg></div>
                           </div>
                           <nav data-w-id="d9812076-6b1d-1530-a77a-30bd6a45046e" className="af-class-navbar12_dropdown-list w-dropdown-list">
-                            <div className="af-class-navbar12_dropdown-content">
-                              <div className="af-class-navbar12_dropdown-link-list">
+                            <div className="af-class-navbar12_dropdown-link-list">
                                 <h4 className="af-class-text-size-small af-class-text-weight-semibold">Explore Our Pages</h4>
-                                <a href="input.html" aria-current="page" className="af-class-navbar12_dropdown-link w-inline-block w--current">
+                                <a href="fileupload" aria-current="page" className="af-class-navbar12_dropdown-link w-inline-block w--current">
                                   <div className="af-class-navbar12_icon-wrapper">
                                     <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                                         <path fill="currentColor" d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01L12.01 11L8 15.01z" />
@@ -117,7 +116,7 @@ class InputView extends React.Component {
                                     <p className="af-class-text-size-small af-class-hide-mobile-landscape">Learn more about our vocal imitation guide.</p>
                                   </div>
                                 </a>
-                                <a href="record.html" className="af-class-navbar12_dropdown-link w-inline-block">
+                                <a href="record" className="af-class-navbar12_dropdown-link w-inline-block">
                                   <div className="af-class-navbar12_icon-wrapper">
                                     <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                                         <path fill="currentColor" d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15a.998.998 0 0 0-.98-.85c-.61 0-1.09.54-1 1.14c.49 3 2.89 5.35 5.91 5.78V20c0 .55.45 1 1 1s1-.45 1-1v-2.08a6.993 6.993 0 0 0 5.91-5.78c.1-.6-.39-1.14-1-1.14z" />
@@ -128,7 +127,7 @@ class InputView extends React.Component {
                                     <p className="af-class-text-size-small af-class-hide-mobile-landscape">Record your own voice for vocal imitation.</p>
                                   </div>
                                 </a>
-                                <a href="feedback.html" className="af-class-navbar12_dropdown-link w-inline-block">
+                                <a href="feedback" className="af-class-navbar12_dropdown-link w-inline-block">
                                   <div className="af-class-navbar12_icon-wrapper">
                                     <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                                         <path fill="currentColor" d="M20 19.59V8l-6-6H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c.45 0 .85-.15 1.19-.4l-4.43-4.43c-.8.52-1.74.83-2.76.83c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5c0 1.02-.31 1.96-.83 2.75L20 19.59zM9 13c0 1.66 1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3s-3 1.34-3 3z" />
@@ -139,7 +138,7 @@ class InputView extends React.Component {
                                     <p className="af-class-text-size-small af-class-hide-mobile-landscape">Analyze the similarity between your voice and the target voice.</p>
                                   </div>
                                 </a>
-                                <a href="faqs.html" className="af-class-navbar12_dropdown-link w-inline-block">
+                                <a href="faqs" className="af-class-navbar12_dropdown-link w-inline-block">
                                   <div className="af-class-navbar12_icon-wrapper">
                                     <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                                         <path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zm-9-4h2v2h-2zm0-6h2v4h-2z" />
@@ -151,47 +150,6 @@ class InputView extends React.Component {
                                   </div>
                                 </a>
                               </div>
-                              <div className="af-class-navbar12_dropdown-link-list">
-                                <h4 className="af-class-text-size-small af-class-text-weight-semibold">More Pages</h4>
-                                <a href="#" className="af-class-navbar12_dropdown-link w-inline-block">
-                                  <div className="af-class-navbar12_icon-wrapper">
-                                    <div className="af-class-icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fillRule="evenodd" clipRule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor" />
-                                      </svg></div>
-                                  </div>
-                                  <div className="af-class-navbar12_text-wrapper">
-                                    <div className="af-class-text-weight-semibold">Sample page1</div>
-                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">Discover tips and tricks for improving your vocal imitation skills.</p>
-                                  </div>
-                                </a>
-                                <a href="#" className="af-class-navbar12_dropdown-link w-inline-block">
-                                  <div className="af-class-navbar12_icon-wrapper">
-                                    <div className="af-class-icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fillRule="evenodd" clipRule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor" />
-                                      </svg></div>
-                                  </div>
-                                  <div className="af-class-navbar12_text-wrapper">
-                                    <div className="af-class-text-weight-semibold">Sample page2</div>
-                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">Learn about famous voice imitators and their techniques.</p>
-                                  </div>
-                                </a>
-                                <a href="#" className="af-class-navbar12_dropdown-link w-inline-block">
-                                  <div className="af-class-navbar12_icon-wrapper">
-                                    <div className="af-class-icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fillRule="evenodd" clipRule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor" />
-                                      </svg></div>
-                                  </div>
-                                  <div className="af-class-navbar12_text-wrapper">
-                                    <div className="af-class-text-weight-semibold">Sample page3</div>
-                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">Get inspired by success stories of vocal imitation enthusiasts.</p>
-                                  </div>
-                                </a>
-                                <div className="af-class-navbar12_text-wrapper">
-                                  <div className="af-class-text-weight-semibold">Sample page3</div>
-                                  <p className="af-class-text-size-small af-class-hide-mobile-landscape">Get inspired by success stories of vocal imitation enthusiasts.</p>
-                                </div>
-                              </div>
-                            </div>
                           </nav>
                         </div>
                         <div className="af-class-navbar12_menu-buttons">
@@ -324,7 +282,7 @@ class InputView extends React.Component {
                             </div>
                           </div>
                           <div id="w-node-_2eedbf2d-1f87-6c4a-4e97-0a678355fac6-09c77288" className="af-class-upload-voice-file-or-input-youtube-url-link-with-timeline_4_cta_button-row">
-                            <a href="record.html" className="af-class-button w-button">Let's Record!</a>
+                            <a href="record" className="af-class-button w-button">Let's Record!</a>
                             <a href="#" className="af-class-button af-class-is-secondary w-button">Learn More</a>
                           </div>
                         </div>

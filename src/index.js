@@ -6,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import './styles';
 import './scripts';
 import IndexView from './views/IndexView';
-import IndexController from './controllers/IndexController'
 import InputView from './views/InputView';
 import RecordView from './views/RecordView';
 import FeedbackView from './views/FeedbackView';
@@ -17,14 +16,13 @@ import NotFoundView from './views/NotFoundView';
 ReactDOM.render(
     <BrowserRouter>
         <Routes>
-            //<Route path="/" element={<IndexView />} />
-            <Route path="/" element={<IndexController />} />
-            <Route path="/input.html" element={<InputView />} />
-            <Route path="/record.html" element={<RecordView />} />
-            <Route path="/feedback.html" element={<FeedbackView />} />
-            <Route path="/faqs.html" element={<FaqsView />} />
-            <Route path="/401.html" element={<UnauthorizedView />} />
-            <Route path="/404.html" element={<NotFoundView />} />
+            <Route path="/" element={<IndexView />} />
+            <Route path="/fileupload" element={<InputView />} />
+            <Route path="/record" element={<RecordView />} />
+            <Route path="/feedback" element={<FeedbackView />} />
+            <Route path="/faqs" element={<FaqsView />} />
+            <Route path="/401" element={<UnauthorizedView />} />
+            <Route path="/404" element={<NotFoundView />} />
         </Routes>
     </BrowserRouter>
 , document.getElementById('root'));
