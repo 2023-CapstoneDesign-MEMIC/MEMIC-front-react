@@ -93,8 +93,7 @@ class FeedbackView extends React.Component {
                         </address>
                       </div>
                       <nav role="navigation" className="af-class-navbar12_menu af-class-is-page-height-tablet w-nav-menu">
-                        <a href="#" className="af-class-navbar12_link w-nav-link">Service</a>
-                        <a href="#" className="af-class-navbar12_link w-nav-link">Start Now</a>
+                        {/*<a href="#" className="af-class-navbar12_link w-nav-link">Start Now</a>*/}
                         <div data-hover="true" data-delay={200} data-w-id="7b6858cc-3e06-ad26-979c-0d153f94f125" className="af-class-navbar12_menu-dropdown w-dropdown">
                           <div className="af-class-navbar12_dropdown-toggle w-dropdown-toggle">
                             <div>More</div>
@@ -164,13 +163,13 @@ class FeedbackView extends React.Component {
                       <div className="af-class-padding-section-large-3">
                         <div className="af-class-text-align-center">
                           <div className="af-class-margin-bottom af-class-margin-small">
-                            <h1>Here's Your Report</h1>
+                            <h1>Voice Report</h1>
                           </div>
-                          <p className="af-class-text-size-medium-2">Finally, Report Page. Get Feedback Right Now!</p>
+                          <p className="af-class-text-size-medium-2">Feedback just for you</p>
                           <div className="af-class-margin-top af-class-margin-medium">
                             <div className="af-class-button-group af-class-is-center">
-                              <a href="#report" className="af-class-button w-button">Move On to Report</a>
-                              <a href="record" className="af-class-button af-class-is-secondary w-button">Go Back to Record</a>
+                              <a href="#report" className="af-class-button w-button">Report page</a>
+                              <a href="record" className="af-class-button af-class-is-secondary w-button">Record Again?</a>
                             </div>
                           </div>
                         </div>

@@ -69,16 +69,16 @@ const AudioRecorder = () => {
         <>
           <button
             onClick={isRecording ? stopRecording : startRecording}
-            className="AudioRecorder-button"
+            className="af-class-button af-class-is-small w-button"
           >
-            {isRecording ? 'Stop Recording' : hasRecorded ? 'Re-Recording' : 'Start Recording'}
+            {isRecording ? 'Stop Recording' : hasRecorded ? 'Retry?' : 'Start Recording'}
           </button>
           {audioURL && (
             <>
               <audio src={audioURL} controls className="AudioRecorder-audio" />
               <button
                 onClick={submitRecording}
-                className="AudioRecorder-button"
+                className="af-class-button af-class-is-small w-button"
               >
                 Submit Recording
               </button>

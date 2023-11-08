@@ -78,7 +78,7 @@ class FaqsView extends React.Component {
               <section>
                 <div data-animation="default" className="af-class-navbar12_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="f70efc45-9248-96cf-a696-7d3719cae7c8" role="banner" data-duration={400} id="nav_bar">
                   <div className="af-class-navbar12_container">
-                    <a href="index.html" className="af-class-navbar12_logo-link w-nav-brand"><img src="images/logo.png" loading="lazy" width={42} alt="logo for navbar
+                    <a href="/" className="af-class-navbar12_logo-link w-nav-brand"><img src="images/logo.png" loading="lazy" width={42} alt="logo for navbar
         " className="af-class-navbar12_logo" /></a>
                     <div className="af-class-navbar12_menu-button w-nav-button">
                       <address className="af-class-menu-icon1">
@@ -90,8 +90,6 @@ class FaqsView extends React.Component {
                       </address>
                     </div>
                     <nav role="navigation" className="af-class-navbar12_menu af-class-is-page-height-tablet w-nav-menu">
-                    <a href="#Improve" className="af-class-navbar12_link w-nav-link">Service</a>
-                    <a href="#Start_now" className="af-class-navbar12_link w-nav-link">Start Now</a>
                     <div data-hover="true" data-delay={200} data-w-id="18a77209-24cc-8d26-8fa2-7e9adce00fa8" className="af-class-navbar12_menu-dropdown w-dropdown">
                       <div className="af-class-navbar12_dropdown-toggle w-dropdown-toggle">
                         <div>More</div>
@@ -158,23 +156,23 @@ class FaqsView extends React.Component {
                 </div>
               </section>
               <main className="af-class-main-wrapper">
-                <header className="af-class-section_about-faqs_header">
-                  <div className="af-class-padding-global-2">
-                    <div className="af-class-container-large">
-                      <div className="af-class-padding-section-large-3">
-                        <div className="af-class-max-width-large">
-                          <div className="af-class-margin-bottom af-class-margin-small">
-                            <h1 className="af-class-text-color-white-3">Frequently Asked Questions</h1>
-                          </div>
-                          <p className="af-class-text-size-medium af-class-text-color-white">Find answers to common questions about ME:MIC and its features.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="af-class-about-faqs_header_background-image-wrapper">
-                    <div className="af-class-image-overlay-layer" /><img src="images/placeholder-image.svg" loading="eager" alt className="af-class-about-faqs_header_background-image" />
-                  </div>
-                </header>
+                {/*<header className="af-class-section_about-faqs_header">*/}
+                {/*  <div className="af-class-padding-global-2">*/}
+                {/*    <div className="af-class-container-large">*/}
+                {/*      <div className="af-class-padding-section-large-3">*/}
+                {/*        <div className="af-class-max-width-large">*/}
+                {/*          <div className="af-class-margin-bottom af-class-margin-small">*/}
+                {/*            <h1 className="af-class-text-color-white-3">Frequently Asked Questions</h1>*/}
+                {/*          </div>*/}
+                {/*          <p className="af-class-text-size-medium af-class-text-color-white">Find answers to common questions about ME:MIC and its features.</p>*/}
+                {/*        </div>*/}
+                {/*      </div>*/}
+                {/*    </div>*/}
+                {/*  </div>*/}
+                {/*  <div className="af-class-about-faqs_header_background-image-wrapper">*/}
+                {/*    <div className="af-class-image-overlay-layer" /><img src="images/placeholder-image.svg" loading="eager" alt className="af-class-about-faqs_header_background-image" />*/}
+                {/*  </div>*/}
+                {/*</header>*/}
                 <section className="af-class-section_about-faqs_faq">
                   <div className="af-class-padding-global-2">
                     <div className="af-class-container-large">
@@ -185,15 +183,14 @@ class FaqsView extends React.Component {
                               <div className="af-class-margin-bottom af-class-margin-small">
                                 <h2>FAQs</h2>
                               </div>
-                              <p className="af-class-text-size-medium">Answer common questions about uploading voice files and extracting audio from YouTube videos</p>
                             </div>
                           </div>
                         </div>
                         <div className="w-layout-grid af-class-about-faqs_faq_component">
                           <div className="w-layout-grid af-class-about-faqs_faq_list">
                             <div className="af-class-about-faqs_faq_accordion">
-                              <div data-w-id="b34ad7eb-0208-7600-855c-8d59e7ff1ffd" className="af-class-about-faqs_faq_question">
-                                <div className="af-class-text-size-medium af-class-text-weight-bold">How to upload files?</div>
+                              <div data-w-id="b34ad7eb-0208-7600-855c-8d59e7ff2011" className="af-class-about-faqs_faq_question">
+                                <div className="af-class-text-size-medium af-class-text-weight-bold">어떤 파일을 업로드해야 하나요?</div>
                                 <div className="af-class-about-faqs_faq_icon-wrapper">
                                   <div className="af-class-icon-embed-small w-embed"><svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor" />
@@ -202,28 +199,13 @@ class FaqsView extends React.Component {
                               </div>
                               <div style={{width: '100%', height: 0}} className="af-class-about-faqs_faq_answer">
                                 <div className="af-class-margin-bottom af-class-margin-small">
-                                  <p>To upload a file, go to the upload page and click on the 'Choose File' button. Select the file from your device and click 'Upload' to start the process.</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="af-class-about-faqs_faq_accordion">
-                              <div data-w-id="b34ad7eb-0208-7600-855c-8d59e7ff2007" className="af-class-about-faqs_faq_question">
-                                <div className="af-class-text-size-medium af-class-text-weight-bold">How to extract audio from YouTube videos?</div>
-                                <div className="af-class-about-faqs_faq_icon-wrapper">
-                                  <div className="af-class-icon-embed-small w-embed"><svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor" />
-                                    </svg></div>
-                                </div>
-                              </div>
-                              <div style={{width: '100%', height: 0}} className="af-class-about-faqs_faq_answer">
-                                <div className="af-class-margin-bottom af-class-margin-small">
-                                  <p>To extract audio from a YouTube video, go to the extraction page and enter the YouTube URL link and timeline. Click 'Extract Audio' to start the extraction process.</p>
+                                  <p>[.mp3,.wav,.flac,.aac]와 같은 음성 파일을 업로드해주세요.</p>
                                 </div>
                               </div>
                             </div>
                             <div className="af-class-about-faqs_faq_accordion">
                               <div data-w-id="b34ad7eb-0208-7600-855c-8d59e7ff2011" className="af-class-about-faqs_faq_question">
-                                <div className="af-class-text-size-medium af-class-text-weight-bold">How long does the extraction process take?</div>
+                                <div className="af-class-text-size-medium af-class-text-weight-bold">URL에서 음성을 추출할 때 제한이 있나요?</div>
                                 <div className="af-class-about-faqs_faq_icon-wrapper">
                                   <div className="af-class-icon-embed-small w-embed"><svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor" />
@@ -232,13 +214,13 @@ class FaqsView extends React.Component {
                               </div>
                               <div style={{width: '100%', height: 0}} className="af-class-about-faqs_faq_answer">
                                 <div className="af-class-margin-bottom af-class-margin-small">
-                                  <p>The extraction process usually takes a few seconds to a minute, depending on the length of the video.</p>
+                                  <p>네, 성인용 콘텐츠로 분류된 유튜브 영상의 경우 음성 추출이 제한됩니다. <br />연령 제한이 없는 영상에 대해서는 Spleeter의 입력 폼에 정보를 정확하게 입력했는지 확인해 주세요.</p>
                                 </div>
                               </div>
                             </div>
                             <div className="af-class-about-faqs_faq_accordion">
-                              <div data-w-id="b34ad7eb-0208-7600-855c-8d59e7ff201b" className="af-class-about-faqs_faq_question">
-                                <div className="af-class-text-size-medium af-class-text-weight-bold">Can I record my own vocal imitation?</div>
+                              <div data-w-id="b34ad7eb-0208-7600-855c-8d59e7ff2011" className="af-class-about-faqs_faq_question">
+                                <div className="af-class-text-size-medium af-class-text-weight-bold">음성을 추출하는데 얼마나 걸리나요?</div>
                                 <div className="af-class-about-faqs_faq_icon-wrapper">
                                   <div className="af-class-icon-embed-small w-embed"><svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor" />
@@ -247,13 +229,13 @@ class FaqsView extends React.Component {
                               </div>
                               <div style={{width: '100%', height: 0}} className="af-class-about-faqs_faq_answer">
                                 <div className="af-class-margin-bottom af-class-margin-small">
-                                  <p>Yes, you can record your own vocal imitation on the recording page. Just click on the 'Record' button and start singing or speaking.</p>
+                                  <p>비디오 길이에 따라 추출 과정은 보통 몇 초에서 1분 정도 걸립니다.</p>
                                 </div>
                               </div>
                             </div>
                             <div className="af-class-about-faqs_faq_accordion">
-                              <div data-w-id="b34ad7eb-0208-7600-855c-8d59e7ff2025" className="af-class-about-faqs_faq_question">
-                                <div className="af-class-text-size-medium af-class-text-weight-bold">How does the similarity analysis work?</div>
+                              <div data-w-id="b34ad7eb-0208-7600-855c-8d59e7ff2011" className="af-class-about-faqs_faq_question">
+                                <div className="af-class-text-size-medium af-class-text-weight-bold">성대모사를 녹음할 때 주의할 사항이 있나요?</div>
                                 <div className="af-class-about-faqs_faq_icon-wrapper">
                                   <div className="af-class-icon-embed-small w-embed"><svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor" />
@@ -262,15 +244,15 @@ class FaqsView extends React.Component {
                               </div>
                               <div style={{width: '100%', height: 0}} className="af-class-about-faqs_faq_answer">
                                 <div className="af-class-margin-bottom af-class-margin-small">
-                                  <p>The similarity analysis compares the recorded voice with the voice file or extracted voice. It analyzes factors such as pitch, tone, and rhythm to determine the similarity.</p>
+                                  <p>주변 소음이나 잡음이 적을수록 ME:MIC이 더욱 정교하게 평가합니다. 최대한 조용한 환경에서 녹음해보세요. </p>
                                 </div>
                               </div>
                             </div>
                           </div>
                           <div className="w-layout-grid af-class-about-faqs_faq_list">
                             <div className="af-class-about-faqs_faq_accordion">
-                              <div data-w-id="b34ad7eb-0208-7600-855c-8d59e7ff2030" className="af-class-about-faqs_faq_question">
-                                <div className="af-class-text-size-medium af-class-text-weight-bold">How accurate is the similarity analysis?</div>
+                              <div data-w-id="b34ad7eb-0208-7600-855c-8d59e7ff2025" className="af-class-about-faqs_faq_question">
+                                <div className="af-class-text-size-medium af-class-text-weight-bold">유사도 평가는 어떻게 동작하나요?</div>
                                 <div className="af-class-about-faqs_faq_icon-wrapper">
                                   <div className="af-class-icon-embed-small w-embed"><svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor" />
@@ -279,13 +261,28 @@ class FaqsView extends React.Component {
                               </div>
                               <div style={{width: '100%', height: 0}} className="af-class-about-faqs_faq_answer">
                                 <div className="af-class-margin-bottom af-class-margin-small">
-                                  <p>The accuracy of the similarity analysis depends on various factors, including the quality of the recording and the complexity of the voice file. It provides a general indication of similarity.</p>
+                                  <p>ME:MIC은 mfcc를 기반으로 자체적인 유사도 점수를 계산합니다. 상세 보기 탭에서 주파수 그래프를 확인할 수 있습니다.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="af-class-about-faqs_faq_accordion">
+                              <div data-w-id="b34ad7eb-0208-7600-855c-8d59e7ff2030" className="af-class-about-faqs_faq_question">
+                                <div className="af-class-text-size-medium af-class-text-weight-bold">분석 결과는 얼마나 정확한가요?</div>
+                                <div className="af-class-about-faqs_faq_icon-wrapper">
+                                  <div className="af-class-icon-embed-small w-embed"><svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor" />
+                                    </svg></div>
+                                </div>
+                              </div>
+                              <div style={{width: '100%', height: 0}} className="af-class-about-faqs_faq_answer">
+                                <div className="af-class-margin-bottom af-class-margin-small">
+                                  <p>유사도 분석의 정확도는 사용된 데이터와 분석 방법에 따라 다릅니다. 일반적으로, 품질이 좋은 데이터가 많이 포함될수록 더욱 정확한 결과를 얻을 수 있습니다. 그러나 완벽한 정확도를 보장하기는 어렵고, 여러 변수를 고려한 일정 수준의 오차 범위를 고려해야 합니다.</p>
                                 </div>
                               </div>
                             </div>
                             <div className="af-class-about-faqs_faq_accordion">
                               <div data-w-id="b34ad7eb-0208-7600-855c-8d59e7ff203a" className="af-class-about-faqs_faq_question">
-                                <div className="af-class-text-size-medium af-class-text-weight-bold">What feedback will I receive?</div>
+                                <div className="af-class-text-size-medium af-class-text-weight-bold">어떤 피드백을 받을 수 있나요?</div>
                                 <div className="af-class-about-faqs_faq_icon-wrapper">
                                   <div className="af-class-icon-embed-small w-embed"><svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor" />
@@ -294,43 +291,13 @@ class FaqsView extends React.Component {
                               </div>
                               <div style={{width: '100%', height: 0}} className="af-class-about-faqs_faq_answer">
                                 <div className="af-class-margin-bottom af-class-margin-small">
-                                  <p>Based on the similarity analysis, you will receive feedback on how closely your vocal imitation matches the voice file or extracted voice. This feedback can help you improve your vocal skills.</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="af-class-about-faqs_faq_accordion">
-                              <div data-w-id="b34ad7eb-0208-7600-855c-8d59e7ff2044" className="af-class-about-faqs_faq_question">
-                                <div className="af-class-text-size-medium af-class-text-weight-bold">What if I still have questions?</div>
-                                <div className="af-class-about-faqs_faq_icon-wrapper">
-                                  <div className="af-class-icon-embed-small w-embed"><svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor" />
-                                    </svg></div>
-                                </div>
-                              </div>
-                              <div style={{width: '100%', height: 0}} className="af-class-about-faqs_faq_answer">
-                                <div className="af-class-margin-bottom af-class-margin-small">
-                                  <p>If you still have questions, feel free to reach out to us. We're here to help!</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="af-class-about-faqs_faq_accordion">
-                              <div data-w-id="b34ad7eb-0208-7600-855c-8d59e7ff204e" className="af-class-about-faqs_faq_question">
-                                <div className="af-class-text-size-medium af-class-text-weight-bold">Still have questions?</div>
-                                <div className="af-class-about-faqs_faq_icon-wrapper">
-                                  <div className="af-class-icon-embed-small w-embed"><svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor" />
-                                    </svg></div>
-                                </div>
-                              </div>
-                              <div style={{width: '100%', height: 0}} className="af-class-about-faqs_faq_answer">
-                                <div className="af-class-margin-bottom af-class-margin-small">
-                                  <p>If you have any more questions or need further assistance, please don't hesitate to contact us.</p>
+                                  <p>유사도 분석을 통해, 사용자의 녹음과 음성 파일이 얼마나 유사한지에 대한 피드백을 받을 수 있습니다. 이 피드백은 사용자가 자신의 성대모사 능력에서 부족한 부분을 파악하고 개선할 수 있는 기회를 제공합니다. </p>
                                 </div>
                               </div>
                             </div>
                             <div className="af-class-about-faqs_faq_accordion">
                               <div data-w-id="b34ad7eb-0208-7600-855c-8d59e7ff2058" className="af-class-about-faqs_faq_question">
-                                <div className="af-class-text-size-medium af-class-text-weight-bold">Contact</div>
+                                <div className="af-class-text-size-medium af-class-text-weight-bold">기타</div>
                                 <div className="af-class-about-faqs_faq_icon-wrapper">
                                   <div className="af-class-icon-embed-small w-embed"><svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor" />
@@ -339,7 +306,7 @@ class FaqsView extends React.Component {
                               </div>
                               <div style={{width: '100%', height: 0}} className="af-class-about-faqs_faq_answer">
                                 <div className="af-class-margin-bottom af-class-margin-small">
-                                  <p>For any inquiries or support, you can contact our team at [email protected]</p>
+                                  <p>기타 문의사항이나 지원이 필요하면, [sample@email.com]으로 연락해주세요.</p>
                                 </div>
                               </div>
                             </div>
@@ -363,76 +330,7 @@ class FaqsView extends React.Component {
                   </div>
                 </section>
                 <section className="af-class-section_about-faqs_contact">
-                  <div className="af-class-padding-global-2">
-                    <div className="af-class-container-large">
-                      <div className="af-class-padding-section-large-3">
-                        <div className="af-class-margin-bottom af-class-margin-xxlarge">
-                          <div className="af-class-text-align-center">
-                            <div className="af-class-max-width-large af-class-align-center">
-                              <div className="af-class-margin-bottom af-class-margin-xsmall">
-                                <div className="af-class-text-weight-semibold">Support</div>
-                              </div>
-                              <div className="af-class-margin-bottom af-class-margin-small">
-                                <h2>Get in Touch</h2>
-                              </div>
-                              <p className="af-class-text-size-medium">If you have any questions or need assistance, please reach out to us.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="w-layout-grid af-class-about-faqs_contact_component">
-                          <div className="af-class-about-faqs_contact_item">
-                            <div className="af-class-margin-bottom af-class-margin-small">
-                              <div className="af-class-about-faqs_contact_icon-wrapper">
-                                <div className="af-class-icon-embed-medium-5 w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 4H4C2.897 4 2 4.897 2 6V18C2 19.103 2.897 20 4 20H20C21.103 20 22 19.103 22 18V6C22 4.897 21.103 4 20 4ZM20 6V6.511L12 12.734L4 6.512V6H20ZM4 18V9.044L11.386 14.789C11.5611 14.9265 11.7773 15.0013 12 15.0013C12.2227 15.0013 12.4389 14.9265 12.614 14.789L20 9.044L20.002 18H4Z" fill="currentColor" />
-                                  </svg></div>
-                              </div>
-                            </div>
-                            <div className="af-class-margin-bottom af-class-margin-xsmall">
-                              <h3 className="af-class-heading-style-h4">Email</h3>
-                            </div>
-                            <div className="af-class-margin-bottom af-class-margin-small">
-                              <p>Send us an email and we'll get back to you as soon as possible.</p>
-                            </div>
-                            <a href="#" className="af-class-text-style-link">support@memic.com</a>
-                          </div>
-                          <div className="af-class-about-faqs_contact_item">
-                            <div className="af-class-margin-bottom af-class-margin-small">
-                              <div className="af-class-about-faqs_contact_icon-wrapper">
-                                <div className="af-class-icon-embed-medium-5 w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17.707 12.293C17.6142 12.2 17.504 12.1263 17.3827 12.076C17.2614 12.0257 17.1313 11.9998 17 11.9998C16.8687 11.9998 16.7386 12.0257 16.6173 12.076C16.496 12.1263 16.3858 12.2 16.293 12.293L14.699 13.887C13.96 13.667 12.581 13.167 11.707 12.293C10.833 11.419 10.333 10.04 10.113 9.30096L11.707 7.70696C11.7999 7.61417 11.8737 7.50397 11.924 7.38265C11.9743 7.26134 12.0002 7.13129 12.0002 6.99996C12.0002 6.86862 11.9743 6.73858 11.924 6.61726C11.8737 6.49595 11.7999 6.38575 11.707 6.29296L7.707 2.29296C7.61421 2.20001 7.50401 2.12627 7.38269 2.07596C7.26138 2.02565 7.13133 1.99976 7 1.99976C6.86866 1.99976 6.73862 2.02565 6.6173 2.07596C6.49599 2.12627 6.38579 2.20001 6.293 2.29296L3.581 5.00496C3.201 5.38496 2.987 5.90696 2.995 6.43996C3.018 7.86396 3.395 12.81 7.293 16.708C11.191 20.606 16.137 20.982 17.562 21.006H17.59C18.118 21.006 18.617 20.798 18.995 20.42L21.707 17.708C21.7999 17.6152 21.8737 17.505 21.924 17.3837C21.9743 17.2623 22.0002 17.1323 22.0002 17.001C22.0002 16.8696 21.9743 16.7396 21.924 16.6183C21.8737 16.4969 21.7999 16.3867 21.707 16.294L17.707 12.293ZM17.58 19.005C16.332 18.984 12.062 18.649 8.707 15.293C5.341 11.927 5.015 7.64196 4.995 6.41896L7 4.41396L9.586 6.99996L8.293 8.29296C8.17546 8.41041 8.08904 8.55529 8.04155 8.71453C7.99406 8.87376 7.987 9.04231 8.021 9.20496C8.045 9.31996 8.632 12.047 10.292 13.707C11.952 15.367 14.679 15.954 14.794 15.978C14.9565 16.0129 15.1253 16.0064 15.2846 15.9591C15.444 15.9117 15.5889 15.825 15.706 15.707L17 14.414L19.586 17L17.58 19.005V19.005Z" fill="currentColor" />
-                                  </svg></div>
-                              </div>
-                            </div>
-                            <div className="af-class-margin-bottom af-class-margin-xsmall">
-                              <h3 className="af-class-heading-style-h4">Phone</h3>
-                            </div>
-                            <div className="af-class-margin-bottom af-class-margin-small">
-                              <p>Give us a call during our office hours for immediate assistance.</p>
-                            </div>
-                            <a href="#" className="af-class-text-style-link">+1 (555) 123-4567</a>
-                          </div>
-                          <div className="af-class-about-faqs_contact_item">
-                            <div className="af-class-margin-bottom af-class-margin-small">
-                              <div className="af-class-about-faqs_contact_icon-wrapper">
-                                <div className="af-class-icon-embed-medium-5 w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 14C14.206 14 16 12.206 16 10C16 7.794 14.206 6 12 6C9.794 6 8 7.794 8 10C8 12.206 9.794 14 12 14ZM12 8C13.103 8 14 8.897 14 10C14 11.103 13.103 12 12 12C10.897 12 10 11.103 10 10C10 8.897 10.897 8 12 8Z" fill="currentColor" />
-                                    <path d="M11.42 21.814C11.5892 21.9349 11.792 21.9998 12 21.9998C12.208 21.9998 12.4107 21.9349 12.58 21.814C12.884 21.599 20.029 16.44 20 10C20 5.589 16.411 2 12 2C7.589 2 4 5.589 4 9.995C3.971 16.44 11.116 21.599 11.42 21.814ZM12 4C15.309 4 18 6.691 18 10.005C18.021 14.443 13.612 18.428 12 19.735C10.389 18.427 5.979 14.441 6 10C6 6.691 8.691 4 12 4Z" fill="currentColor" />
-                                  </svg></div>
-                              </div>
-                            </div>
-                            <div className="af-class-margin-bottom af-class-margin-xsmall">
-                              <h3 className="af-class-heading-style-h4">Office</h3>
-                            </div>
-                            <div className="af-class-margin-bottom af-class-margin-small">
-                              <p>Visit our office during business hours for in-person support.</p>
-                            </div>
-                            <a href="#" className="af-class-text-style-link">123 Main St, Sydney NSW 2000, Australia</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+
                   <footer className="af-class-footer4_component">
                     <div className="af-class-padding-global">
                       <div className="af-class-container-large">

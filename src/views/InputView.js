@@ -84,6 +84,7 @@ class InputView extends React.Component {
                       <a href="/" className="af-class-navbar12_logo-link w-nav-brand"><img src="images/logo.png" loading="lazy" width={42} alt="logo for navbar
         " className="af-class-navbar12_logo" /></a>
                       <div className="af-class-navbar12_menu-button w-nav-button">
+
                         <address className="af-class-menu-icon1">
                           <div className="af-class-menu-icon1_line-top" />
                           <div className="af-class-menu-icon1_line-middle">
@@ -93,6 +94,7 @@ class InputView extends React.Component {
                         </address>
                       </div>
                       <nav role="navigation" className="af-class-navbar12_menu af-class-is-page-height-tablet w-nav-menu">
+                        <a href="#Spleeter" className="af-class-navbar12_link w-nav-link">Spleeter</a>
                         <div data-hover="true" data-delay={200} data-w-id="d9812076-6b1d-1530-a77a-30bd6a450469" className="af-class-navbar12_menu-dropdown w-dropdown">
                           <div className="af-class-navbar12_dropdown-toggle w-dropdown-toggle">
                             <div>More</div>
@@ -186,7 +188,7 @@ class InputView extends React.Component {
                   </div>
                   <section>
                     <section className="af-class-section_cta28-2">
-                      <div className="af-class-padding-global-2">
+                      <div id="Spleeter" className="af-class-padding-global-2">
                         <div className="af-class-container-small">
                           <div className="af-class-padding-section-large-3">
                             <div className="af-class-text-align-center">

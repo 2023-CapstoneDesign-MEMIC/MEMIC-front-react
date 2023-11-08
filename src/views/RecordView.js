@@ -90,8 +90,7 @@ class RecordView extends React.Component {
                       </address>
                     </div>
                     <nav role="navigation" className="af-class-navbar12_menu af-class-is-page-height-tablet w-nav-menu">
-                      <a href="#" className="af-class-navbar12_link w-nav-link">Service</a>
-                      <a href="#" className="af-class-navbar12_link w-nav-link">Start Now</a>
+                      <a href="#Report" className="af-class-navbar12_link w-nav-link">Report</a>
                       <div data-hover="true" data-delay={200} data-w-id="cdb04180-031c-bd6d-bf2c-3d77774365fc" className="af-class-navbar12_menu-dropdown w-dropdown">
                         <div className="af-class-navbar12_dropdown-toggle w-dropdown-toggle">
                           <div>More</div>
@@ -178,7 +177,7 @@ class RecordView extends React.Component {
                 <section className="af-class-section_record-your-voice_cta">
                   <header className="af-class-section_header62">
                     <section />
-                    <div className="af-class-padding-global-2">
+                    <div id="Report" className="af-class-padding-global-2">
                       <div className="af-class-container-small">
                         <div className="af-class-padding-section-large-3">
                           <div className="af-class-text-align-center">
