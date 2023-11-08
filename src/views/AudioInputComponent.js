@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './AudioInputComponent.css'
 
 const AudioInputComponent = () => {
   const [file, setFile] = useState(null);
@@ -8,7 +9,7 @@ const AudioInputComponent = () => {
   const [content, setContent] = useState('');
   const [submitted, setSubmitted] = useState(false); // 제출 상태 추가
   const navigate = useNavigate();
-
+  const [fileName, setFileName] = useState("샘플 문구");
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
   };
@@ -21,12 +22,13 @@ const AudioInputComponent = () => {
     setContent(event.target.value);
   };
 
+
   const handleSubmit = async () => {
     if (file && title && content) {
       const formData = new FormData();
       formData.append('title', title);
       formData.append('content', content);
-      formData.append('imgfile', file);
+      formData.append('audiofile', file);
 
       try {
         await axios.post('http://127.0.0.1:8000/fileupload/', formData, {
@@ -45,31 +47,31 @@ const AudioInputComponent = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+    <div className="AudioInputComponent-container">
       {submitted ? (
-        <div style={{ color: 'green' }}>Your Submit has successfully finished! Let's move on to Record page!</div>
+        <div className="AudioInputComponent-successMessage">Your Submit has successfully finished! Let's move on to Record page!</div>
       ) : (
         <>
           <input
             type="text"
             value={title}
             onChange={handleTitleChange}
-            placeholder="제목"
-            style={{ width: '300px' }}
+            placeholder="파일 제목"
+            className="AudioInputComponent-input" // Added class name
           />
           <textarea
             value={content}
             onChange={handleContentChange}
-            placeholder="내용"
-            style={{ width: '300px', height: '100px' }}
+            placeholder="파일 내용"
+            className="AudioInputComponent-textarea" // Added class name
           />
           <input
             type="file"
             accept=".mp3,.wav,.flac,.aac"
             onChange={handleFileChange}
-            style={{ width: '300px' }}
+            className="AudioInputComponent-input" // Reused input class name for styling
           />
-          <button onClick={handleSubmit}>Submit</button>
+          <button onClick={handleSubmit} className="af-class-button af-class-is-small w-button">Submit</button>
         </>
       )}
     </div>

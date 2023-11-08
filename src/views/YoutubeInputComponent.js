@@ -43,7 +43,7 @@ const YouTubeComponent = () => {
 
   return (
     <div className="container">
-      <h2>YouTube Audio Spleeter</h2>
+      <h4>Audio Spleeter</h4>
       <input
         className="input-field"
         type="text"
@@ -65,7 +65,7 @@ const YouTubeComponent = () => {
         onChange={handleEndChange}
         placeholder="종료 시간 (초)"
       />
-      <button className="submit-button" onClick={handleSubmit}>Submit</button>
+      <button className="af-class-button af-class-is-small w-button" onClick={handleSubmit}>Submit</button>
     </div>
   );
 };

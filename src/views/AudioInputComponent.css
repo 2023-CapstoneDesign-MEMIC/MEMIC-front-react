@@ -1,0 +1,27 @@
+.AudioInputComponent-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.AudioInputComponent-input,
+.AudioInputComponent-textarea {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc; /* A light gray border for a neutral look */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  transition: border-color 0.3s ease; /* Smooth transition for the border color */
+}
+
+.AudioInputComponent-input:focus,
+.AudioInputComponent-textarea:focus {
+  border-color: #28a745; /* Theme color for focus state */
+  outline: none;
+}
+
+.AudioInputComponent-successMessage {
+  color: #28a745; /* Theme color for the success message */
+}

@@ -93,8 +93,6 @@ class InputView extends React.Component {
                         </address>
                       </div>
                       <nav role="navigation" className="af-class-navbar12_menu af-class-is-page-height-tablet w-nav-menu">
-                        <a href="#" className="af-class-navbar12_link w-nav-link">Service</a>
-                        <a href="#" className="af-class-navbar12_link w-nav-link">Start Now</a>
                         <div data-hover="true" data-delay={200} data-w-id="d9812076-6b1d-1530-a77a-30bd6a450469" className="af-class-navbar12_menu-dropdown w-dropdown">
                           <div className="af-class-navbar12_dropdown-toggle w-dropdown-toggle">
                             <div>More</div>
@@ -169,20 +167,10 @@ class InputView extends React.Component {
                           <div>
                             <AudioInputComponent />
                           </div>
-                          <p className="af-class-text-size-medium">Accepted formats: <br />MP3, WAV, FLAC, AAC</p>
-                          <div className="w-form">
-                            <form id="email-form-3" name="email-form-3" data-name="Email Form 3" method="get" data-wf-page-id="6527ec791dad3c4809c77288" data-wf-element-id="63dbe20c-098b-7589-0d64-f8c1cb86eaab"><input type="text" className="af-class-text-field-3 w-input" maxLength={256} name="field-2" data-name="Field 2" placeholder="Example Text" role="uploadcare-uploader" id="field-2" required /></form>
-                            <div className="w-form-done">
-                              <div>Thank you! Your submission has been received!</div>
-                            </div>
-                            <div className="w-form-fail">
-                              <div>Oops! Something went wrong while submitting the form.</div>
-                            </div>
-                          </div>
                           <div className="af-class-margin-top af-class-margin-medium">
                             <div className="af-class-cta26_form-block w-form">
                               <form id="email-form" name="email-form" data-name="Email Form" method="get" className="af-class-cta26_form" data-wf-page-id="6527ec791dad3c4809c77288" data-wf-element-id="3ca21f2c-8a69-d47d-02b9-29ae37d582bf">
-                                <div className="af-class-text-size-tiny">Please upload the voice file you wish to imitate.</div>
+                                <div className="af-class-text-size-tiny">[file format] .mp3,.wav,.flac,.aac</div>
                               </form>
                               <div className="af-class-success-message w-form-done">
                                 <div className="af-class-success-text">Thank you! Your file has been received!</div>
@@ -195,17 +183,6 @@ class InputView extends React.Component {
                         </div>
                       </div>
                     </div>
-                    <section>
-                      <div className="w-form">
-                        <form id="email-form-2" name="email-form-2" data-name="Email Form 2" method="get" className="af-class-form-2" data-wf-page-id="6527ec791dad3c4809c77288" data-wf-element-id="1f61f290-e1a9-79ce-b21a-9dcf6d059e25"><input type="text" className="af-class-text-field w-input" maxLength={256} name="field" data-name="Field" placeholder="Example Text" id="field" required /></form>
-                        <div className="w-form-done">
-                          <div>Thank you! Your submission has been received!</div>
-                        </div>
-                        <div className="w-form-fail">
-                          <div>Oops! Something went wrong while submitting the form.</div>
-                        </div>
-                      </div>
-                    </section>
                   </div>
                   <section>
                     <section className="af-class-section_cta28-2">
@@ -216,21 +193,12 @@ class InputView extends React.Component {
                               <div className="af-class-margin-bottom af-class-margin-small">
                                 <h1 className="af-class-text-color-white-3">No files? It's ok</h1>
                               </div>
-                              <p className="af-class-text-size-medium af-class-text-color-white">If you enter YouTube URL and timeline, ME:MIC extract a voice file!</p>
+                              <p className="af-class-text-size-medium af-class-text-color-white">If you enter YouTube URL and timeline, ME:MIC extract a voice file.</p>
                               <div className="af-class-margin-top af-class-margin-medium">
-                                <div className="af-class-cta28_form-block w-form">
                                   <div>
                                       <YoutubeInputComponent />
                                   </div>
-                                  <div className="af-class-text-size-tiny af-class-text-color-white">Please imitate your vocal cords as closely as possible.</div>
-
-                                  <div className="af-class-success-message w-form-done">
-                                    <div className="af-class-success-text">Thank you! Your submission was successful!</div>
-                                  </div>
-                                  <div className="af-class-error-message w-form-fail">
-                                    <div className="af-class-error-text">Oops! Something went wrong. Please try again.</div>
-                                  </div>
-                                </div>
+                                  <div className="af-class-text-size-tiny af-class-text-color-white">Please enter the most accurate time possible!</div>
                               </div>
                             </div>
                           </div>
@@ -244,30 +212,30 @@ class InputView extends React.Component {
                 </section>
                 <section className="af-class-section_upload-voice-file-or-input-youtube-url-link-with-timeline_4_cta">
                   <section>
-                    <div className="af-class-padding-section-large-2">
-                      <div className="af-class-margin-bottom af-class-margin-xxlarge">
-                        <div className="af-class-text-align-center">
-                          <div className="af-class-max-width-large af-class-align-center">
-                            <div className="af-class-margin-bottom af-class-margin-small">
-                              <h2>Voice Gallery</h2>
-                            </div>
-                            <p className="af-class-text-size-medium">Browse through the extracted audio files from your source</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="af-class-html-audio-player-embed w-embed"><audio className="af-class-html-audio-player" controls preload="none">
-                          <source src type="audio/mpeg" />
-                          Your browser does not support the audio tag.
-                        </audio></div>
-                      <div className="af-class-html-audio-player-embed w-embed"><audio className="af-class-html-audio-player" controls preload="none">
-                          <source src type="audio/mpeg" />
-                          Your browser does not support the audio tag.
-                        </audio></div>
-                      <div className="af-class-html-audio-player-embed w-embed"><audio className="af-class-html-audio-player" controls preload="none">
-                          <source src type="audio/mpeg" />
-                          Your browser does not support the audio tag.
-                        </audio></div>
-                    </div>
+                    {/*<div className="af-class-padding-section-large-2">*/}
+                    {/*  <div className="af-class-margin-bottom af-class-margin-xxlarge">*/}
+                    {/*    <div className="af-class-text-align-center">*/}
+                    {/*      <div className="af-class-max-width-large af-class-align-center">*/}
+                    {/*        <div className="af-class-margin-bottom af-class-margin-small">*/}
+                    {/*          <h2>Voice Gallery</h2>*/}
+                    {/*        </div>*/}
+                    {/*        <p className="af-class-text-size-medium">Browse through the extracted audio files from your source</p>*/}
+                    {/*      </div>*/}
+                    {/*    </div>*/}
+                    {/*  </div>*/}
+                    {/*  <div className="af-class-html-audio-player-embed w-embed"><audio className="af-class-html-audio-player" controls preload="none">*/}
+                    {/*      <source src type="audio/mpeg" />*/}
+                    {/*      Your browser does not support the audio tag.*/}
+                    {/*    </audio></div>*/}
+                    {/*  <div className="af-class-html-audio-player-embed w-embed"><audio className="af-class-html-audio-player" controls preload="none">*/}
+                    {/*      <source src type="audio/mpeg" />*/}
+                    {/*      Your browser does not support the audio tag.*/}
+                    {/*    </audio></div>*/}
+                    {/*  <div className="af-class-html-audio-player-embed w-embed"><audio className="af-class-html-audio-player" controls preload="none">*/}
+                    {/*      <source src type="audio/mpeg" />*/}
+                    {/*      Your browser does not support the audio tag.*/}
+                    {/*    </audio></div>*/}
+                    {/*</div>*/}
                   </section>
                   <div className="af-class-padding-global-2">
                     <div className="af-class-container-large">
@@ -283,50 +251,41 @@ class InputView extends React.Component {
                           </div>
                           <div id="w-node-_2eedbf2d-1f87-6c4a-4e97-0a678355fac6-09c77288" className="af-class-upload-voice-file-or-input-youtube-url-link-with-timeline_4_cta_button-row">
                             <a href="record" className="af-class-button w-button">Let's Record!</a>
-                            <a href="#" className="af-class-button af-class-is-secondary w-button">Learn More</a>
+                            <a href="/" className="af-class-button af-class-is-secondary w-button">MAIN page</a>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </section>
+                <footer className="af-class-footer4_component">
                 <div className="af-class-padding-global">
-                  <div className="af-class-padding-vertical af-class-padding-xxlarge">
-                    <div className="af-class-padding-bottom af-class-padding-xxlarge">
-                      <div className="w-layout-grid af-class-footer4_top-wrapper">
-                        <a href="#" id="w-node-_852609fb-56cd-993c-dae8-56eabdaef5a0-09c77288" className="af-class-footer4_logo-link w-nav-brand"><img src="images/logo.png" loading="lazy" width={42} alt="logo for navbar
+                  <div className="af-class-container-large">
+                    <div className="af-class-padding-vertical af-class-padding-xxlarge">
+                        <div className="w-layout-grid af-class-footer4_top-wrapper">
+                          <a href="#" id="w-node-_18a77209-24cc-8d26-8fa2-7e9adce0106a-34a692c8" className="af-class-footer4_logo-link w-nav-brand"><img src="images/logo.png" loading="lazy" width={42} alt="logo for navbar
         " className="af-class-navbar12_logo" /></a>
-                        <div className="w-layout-grid af-class-footer4_link-list">
-                          <a href="#" className="af-class-footer4_link">About Us</a>
-                          <a href="#" className="af-class-footer4_link">Contact Us</a>
-                          <a href="#" className="af-class-footer4_link">FAQs</a>
-                          <a href="#" className="af-class-footer4_link">Resources</a>
+                          <div className="w-layout-grid af-class-footer4_link-list">
+                              <div id="w-node-_18a77209-24cc-8d26-8fa2-7e9adce01085-34a692c8" className="af-class-footer4_credit-text">© 2023 MEMIC. All rights reserved.</div>
+                          </div>
+                          <div id="w-node-_5413a46b-6025-d22b-adfc-5c72693f1a7e-34a692c8" className="w-layout-grid af-class-footer4_social-list">
+                            <a href="https://www.notion.so/8c7c66798028437a9f25ee3e0519b77d" target="_blank" className="af-class-footer4_social-link w-inline-block">
+                              <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--simple-icons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                  <path fill="currentColor" d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514c-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233l4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z" />
+                                </svg></div>
+                            </a>
+                            <a href="https://github.com/2023-CapstoneDesign-MEMIC" target="_blank" className="af-class-footer4_social-link w-inline-block">
+                              <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--simple-icons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                  <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                                </svg></div>
+                            </a>
+                          </div>
                         </div>
-                        <div id="w-node-_852609fb-56cd-993c-dae8-56eabdaef5ab-09c77288" className="w-layout-grid af-class-footer4_social-list">
-                          <a href="https://www.notion.so/8c7c66798028437a9f25ee3e0519b77d" className="af-class-footer4_social-link w-inline-block">
-                            <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--simple-icons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514c-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233l4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z" />
-                              </svg></div>
-                          </a>
-                          <a href="https://github.com/2023-CapstoneDesign-MEMIC" className="af-class-footer4_social-link w-inline-block">
-                            <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--simple-icons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                              </svg></div>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="af-class-line-divider" />
-                    <div className="af-class-padding-top af-class-padding-medium">
-                      <div className="w-layout-grid af-class-footer4_bottom-wrapper">
-                        <div id="w-node-_852609fb-56cd-993c-dae8-56eabdaef5b4-09c77288" className="af-class-footer4_credit-text">© 2023 ME:MIC. All rights reserved.</div>
-                      </div>
                     </div>
                   </div>
-                  <div className="af-class-container-large" />
                 </div>
+              </footer>
               </main>
-              <footer className="af-class-footer4_component" />
             </div>
           </div>
         </span>
