@@ -742,13 +742,51 @@
 }
 
 .af-view .af-class-button {
-  border: 1px solid var(--black);
-  background-color: var(--black);
-  color: var(--white);
+  border: none; /* Removes the border for a flat design look */
+  background-color: black ; /* Starting background color is black */
+  color: white; /* White text for high contrast */
   text-align: center;
-  cursor: auto;
-  padding: .75rem 1.5rem;
+  cursor: pointer; /* Indicates the button is clickable */
+  padding: 10px 20px; /* Adequate padding for a touch-friendly design */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern, clean font family */
+  font-size: 16px; /* Readable font size */
+  letter-spacing: 1px; /* Increases spacing between letters for a sophisticated look */
+  text-transform: uppercase; /* Makes all letters uppercase for a styled look */
+  transition: all 0.3s ease; /* Smooth transition for all changes */
+  border-radius: 50px; /* Fully rounded edges for a pill-shaped button */
+  overflow: hidden; /* Ensures the background change doesn't spill outside the border-radius */
+  position: relative; /* Sets the position context for pseudo-elements */
+  outline: none; /* Removes the outline to maintain the flat design on focus */
 }
+
+.af-view .af-class-button::before {
+  content: ''; /* Pseudo-element for the hover effect */
+  position: absolute; /* Positions the pseudo-element relative to the button */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #28a745; /* Bright blue color for the hover effect */
+  z-index: -1; /* Places the pseudo-element behind the button content */
+  transform: scaleX(0); /* Starts with the blue background scaled to 0 */
+  transform-origin: right; /* Starts the transformation from the right */
+  transition: transform 0.3s ease-out; /* Smooth transition for the transform */
+}
+
+.af-view .af-class-button:hover::before {
+  transform: scaleX(1); /* Scales the blue background to full width on hover */
+  transform-origin: left; /* Starts the transformation from the left */
+}
+
+.af-view .af-class-button:focus {
+  outline: none; /* Removes the default focus outline */
+}
+
+.af-view .af-class-button:active {
+  transform: translateY(2px); /* Subtle effect to give a feeling of being pressed */
+}
+
+
 
 .af-view .af-class-button.af-class-is-link {
   color: var(--black);
