@@ -75,9 +75,9 @@ class IndexView extends React.Component {
         <span className="af-view">
           <div>
             <div id="home" className="af-class-page-wrapper">
-              <div data-animation="default" className="af-class-navbar12_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="18a77209-24cc-8d26-8fa2-7e9adce00f9d" role="banner" data-duration={400} id="nav_bar">
+              <div data-animation="default" className="af-class-navbar12_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="18a77209-24cc-8d26-8fa2-7e9adce00f9d" role="banner" data-duration={400} id="nav_bar" style={{ borderBottom: '2px solid #000' }}>
                 <div className="af-class-navbar12_container">
-                  <a href="index.html" aria-current="page" className="af-class-navbar12_logo-link w-nav-brand w--current"><img src="images/logo.png" loading="lazy" width={42} alt="logo for navbar
+                  <a href="" aria-current="page" className="af-class-navbar12_logo-link w-nav-brand w--current"><img src="images/logo.png" loading="lazy" width={42} alt="logo for navbar
         " className="af-class-navbar12_logo" /></a>
                   <div className="af-class-navbar12_menu-button w-nav-button">
                     <address className="af-class-menu-icon1">

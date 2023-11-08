@@ -79,9 +79,9 @@ class InputView extends React.Component {
             <div className="af-class-page-wrapper">
               <main className="af-class-main-wrapper">
                 <section className="af-class-section_upload-voice-file-or-input-youtube-url-link-with-timeline_1_cta-form">
-                  <div data-animation="default" className="af-class-navbar12_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="d9812076-6b1d-1530-a77a-30bd6a45045a" role="banner" data-duration={400} id="nav_bar">
+                  <div data-animation="default" className="af-class-navbar12_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="d9812076-6b1d-1530-a77a-30bd6a45045a" role="banner" data-duration={400} id="nav_bar" style={{ borderBottom: '2px solid #000' }}>
                     <div className="af-class-navbar12_container">
-                      <a href="index.html" className="af-class-navbar12_logo-link w-nav-brand"><img src="images/logo.png" loading="lazy" width={42} alt="logo for navbar
+                      <a href="input.html" className="af-class-navbar12_logo-link w-nav-brand"><img src="images/logo.png" loading="lazy" width={42} alt="logo for navbar
         " className="af-class-navbar12_logo" /></a>
                       <div className="af-class-navbar12_menu-button w-nav-button">
                         <address className="af-class-menu-icon1">

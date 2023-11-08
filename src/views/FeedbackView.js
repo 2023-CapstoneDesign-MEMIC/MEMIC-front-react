@@ -79,7 +79,7 @@ class FeedbackView extends React.Component {
             <div className="af-class-page-wrapper">
               <main className="af-class-main-wrapper">
                 <header className="af-class-section_feedback-page_header">
-                  <div data-animation="default" className="af-class-navbar12_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="7b6858cc-3e06-ad26-979c-0d153f94f116" role="banner" data-duration={400} id="nav_bar">
+                  <div data-animation="default" className="af-class-navbar12_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="7b6858cc-3e06-ad26-979c-0d153f94f116" role="banner" data-duration={400} id="nav_bar" style={{ borderBottom: '2px solid #000' }}>
                     <div className="af-class-navbar12_container">
                       <a href="index.html" className="af-class-navbar12_logo-link w-nav-brand"><img src="images/logo.png" loading="lazy" width={42} alt="logo for navbar
         " className="af-class-navbar12_logo" /></a>
