@@ -56,5 +56,15 @@ function AdditionalCommentButton({ endpoint }) {
     </div>
   );
 }
-
+// {detailVisible && (
+//           <div className="detail-view">
+//             <img src="dummy-graph1.png" alt="그래프1" />
+//             <img src="dummy-graph2.png" alt="그래프2" />
+//             <p className="recommendation">
+//               해당하는 주파수는 ㅋ, ㅌ, ㅍ, ㅆ와 같은 격한 소리의 특징이 담겨 있어요.
+//               해당 주파수 대역에서 따라하려는 음성은 1322 데시벨, 사용자님의 음성은 300 데시벨의 값을 가져요.
+//               해당 부분만 다시 듣고 재시도를 추천드려요!
+//             </p>
+//           </div>
+//         )}
 export default AdditionalCommentButton;

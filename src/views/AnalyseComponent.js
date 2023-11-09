@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './AnalyseComponent.css'; // 스타일 시트를 가져옵니다.
+import ScoreChart from './ScoreChart';
 
 const FeedbackReport = ({ data }) => {
   const [showReferenceAudio, setShowReferenceAudio] = useState(false);
@@ -34,25 +35,17 @@ const FeedbackReport = ({ data }) => {
   };
 
   const feedbackMessage = getFeedbackMessage(data.score);
+  // 점수에 따른 차트를 렌더링하는 부분
+  const scoreChart = <ScoreChart score={data.score} />;
 
   return (
     <div className="report-container">
       <h2 className="title">전체 점수</h2>
       <p className="score">{data.score}%</p>
+      {scoreChart}
       {/* 점수에 따른 멘트 표시 */}
       <p className="recommendation">{feedbackMessage}</p>
       <div className="detail-section">
-        {detailVisible && (
-          <div className="detail-view">
-            <img src="dummy-graph1.png" alt="그래프1" />
-            <img src="dummy-graph2.png" alt="그래프2" />
-            <p className="recommendation">
-              해당하는 주파수는 ㅋ, ㅌ, ㅍ, ㅆ와 같은 격한 소리의 특징이 담겨 있어요.
-              해당 주파수 대역에서 따라하려는 음성은 1322 데시벨, 사용자님의 음성은 300 데시벨의 값을 가져요.
-              해당 부분만 다시 듣고 재시도를 추천드려요!
-            </p>
-          </div>
-        )}
         <div className="buttons-container">
           <button className="af-class-button af-class-is-secondary w-button" onClick={() => toggleAudioPlayer('reference')}>
             따라하려는 음성 듣기

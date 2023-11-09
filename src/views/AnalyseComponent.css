@@ -55,24 +55,6 @@
   margin-top: 20px; /* Additional space above the buttons */
 }
 
-/* Update the .button class for a consistent look */
-.button {
-  background: #007bff;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;
-  transition: background 0.2s ease-in-out;
-  flex: 0 1 auto; /* Flex item can grow and shrink but not beyond its content size */
-}
-
-.button:hover {
-  background: #0056b3;
-}
-
 .audio-player-wrapper {
   /* 오디오 플레이어를 담는 컨테이너의 스타일 */
   margin-top: 10px; /* 버튼과 오디오 플레이어 사이 간격 */
