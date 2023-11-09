@@ -68,14 +68,14 @@ const AudioInputComponent = () => {
                   type="text"
                   value={start}
                   onChange={handleStartChange}
-                  placeholder="Start time (seconds)"
+                  placeholder="시작 시간 (초)"
                   className="AudioInputComponent-input"
                 />
                 <input
                   type="text"
                   value={end}
                   onChange={handleEndChange}
-                  placeholder="End time (seconds)"
+                  placeholder="종료 시간 (초)"
                   className="AudioInputComponent-input"
                 />
               </div>

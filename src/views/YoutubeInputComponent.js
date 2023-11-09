@@ -50,7 +50,6 @@ const YouTubeComponent = () => {
   return (
     <div className="container">
       <h3>Audio Spleeter</h3>
-      <div className="af-class-text-size-tiny af-class-text-color-black">최대한 정확한 시간을 입력해주세요!</div>
       <input
         className="input-field"
         type="text"
@@ -60,31 +59,35 @@ const YouTubeComponent = () => {
       />
       {/* YouTube 영상 미리보기 */}
       {videoId && (
-        <iframe title="YouTube video player" // 고유한 title 속성 추가
-          width="560"
-          height="315"
-          src={`https://www.youtube.com/embed/${videoId}`}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen className="youtube-iframe"
-        ></iframe>
+        <>
+          <iframe title="YouTube video player"
+            width="560"
+            height="315"
+            src={`https://www.youtube.com/embed/${videoId}`}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen className="youtube-iframe"
+          ></iframe>
+          <div className="af-class-text-size-tiny af-class-text-color-black">최대한 정확한 시간을 입력해주세요!</div>
+          {/* 시작 시간과 종료 시간 입력 필드 */}
+          <div className="time-inputs full-width">
+            <input
+              className="input-field time-field"
+              type="text"
+              value={start}
+              onChange={handleStartChange}
+              placeholder="시작 시간 (초)"
+            />
+            <input
+              className="input-field time-field"
+              type="text"
+              value={end}
+              onChange={handleEndChange}
+              placeholder="종료 시간 (초)"
+            />
+          </div>
+        </>
       )}
-      <div className="time-inputs full-width">
-        <input
-          className="input-field time-field"
-          type="text"
-          value={start}
-          onChange={handleStartChange}
-          placeholder="시작 시간 (초)"
-        />
-        <input
-          className="input-field time-field"
-          type="text"
-          value={end}
-          onChange={handleEndChange}
-          placeholder="종료 시간 (초)"
-        />
-      </div>
       <button className="af-class-button af-class-is-small w-button" onClick={handleSubmit}>Submit</button>
     </div>
   );
