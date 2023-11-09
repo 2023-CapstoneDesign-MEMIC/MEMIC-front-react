@@ -4,7 +4,7 @@ import React from 'react'
 import { createScope, map, transformProxies } from './helpers'
 import AnalyseComponent from './AnalyseComponent';
 import AdditionalCommentButton from './AdditionalCommentButton';
-
+import UserGrowthChart from './UserGrowthChart'
 const scripts = [
   { loading: fetch("https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6526603ca6ecfaa934a69294").then(body => body.text()), isAsync: false },
   { loading: fetch("js/webflow.js").then(body => body.text()), isAsync: false },
@@ -255,48 +255,51 @@ class FeedbackView extends React.Component {
                 <section className="af-class-section_feedback-page_features-list">
                   <div className="af-class-padding-global-2">
                     <div className="af-class-container-large">
-                      <div className="af-class-padding-section-large-3">
-                        <div data-duration-in={400} data-duration-out={200} data-current="Tab 1" data-easing="ease" className="af-class-feedback-page_features-list_component w-tabs">
-                          <div id="w-node-_2413b75c-d39f-3fa1-a52b-c1211bb60cbc-a53f92e2" className="af-class-feedback-page_features-list_tabs-menu w-tab-menu">
-                            <a data-w-tab="Tab 1" className="af-class-feedback-page_features-list_tabs-link w-inline-block w-tab-link w--current">
-                              <div className="af-class-margin-bottom af-class-margin-xsmall">
-                                <h3 className="af-class-heading-style-h4">Feedback Categories: <br />Pitch, Tone, Timing</h3>
-                              </div>
-                              <p>Our feedback system analyzes the pitch, tone, and timing of your vocal imitation to provide detailed insights.</p>
-                            </a>
-                            <a data-w-tab="Tab 2" className="af-class-feedback-page_features-list_tabs-link w-inline-block w-tab-link">
-                              <div className="af-class-margin-bottom af-class-margin-xsmall">
-                                <h3 className="af-class-heading-style-h4">Pitch Analysis</h3>
-                              </div>
-                              <p>We evaluate the accuracy of your pitch compared to the original voice file or extracted voice.</p>
-                            </a>
-                            <a data-w-tab="Tab 3" className="af-class-feedback-page_features-list_tabs-link w-inline-block w-tab-link">
-                              <div className="af-class-margin-bottom af-class-margin-xsmall">
-                                <h3 className="af-class-heading-style-h4">Tone Analysis</h3>
-                              </div>
-                              <p>Our system assesses the similarity of your tone to the reference voice, providing valuable feedback for improvement.</p>
-                            </a>
-                          </div>
-                          <div id="w-node-_2413b75c-d39f-3fa1-a52b-c1211bb60ccf-a53f92e2" className="w-tab-content">
-                            <div data-w-tab="Tab 1" className="w-tab-pane w--tab-active">
-                              <div className="af-class-feedback-page_features-list_image-wrapper"><img alt loading="lazy" src="images/GavR.gif" className="af-class-feedback-page_features-list_image" /></div>
-                            </div>
-                            <div data-w-tab="Tab 2" className="w-tab-pane">
-                              <a href="#" className="af-class-feedback-page_features-list_lightbox w-inline-block w-lightbox"><img alt loading="lazy" src="images/placeholder-video-thumbnail.svg" className="af-class-feedback-page_features-list_lightbox-image" />
-                                <div className="af-class-lightbox-play-icon">
-                                  <div className="af-class-icon-embed-large w-embed"><svg width="100%" height="100%" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path fillRule="evenodd" clipRule="evenodd" d="M5.33301 32C5.33301 17.2724 17.2721 5.33334 31.9997 5.33334C39.0721 5.33334 45.8549 8.14286 50.8559 13.1438C55.8568 18.1448 58.6663 24.9276 58.6663 32C58.6663 46.7276 46.7273 58.6667 31.9997 58.6667C17.2721 58.6667 5.33301 46.7276 5.33301 32ZM27.1198 43.4134L42.6664 33.7067C43.2482 33.3341 43.6001 32.6909 43.6001 32C43.6001 31.3092 43.2482 30.6659 42.6664 30.2934L27.0664 20.5867C26.452 20.1993 25.6758 20.1755 25.0388 20.5244C24.4018 20.8734 24.004 21.5403 23.9998 22.2667V41.7334C23.9912 42.4774 24.3963 43.1647 25.0514 43.5174C25.7065 43.8702 26.5033 43.8301 27.1198 43.4134Z" fill="CurrentColor" />
-                                    </svg></div>
-                                </div>
-                                <div className="af-class-video-overlay-layer" />
-                              </a>
-                            </div>
-                            <div data-w-tab="Tab 3" className="w-tab-pane">
-                              <div className="af-class-feedback-page_features-list_image-wrapper"><img alt loading="lazy" src="images/placeholder-image.svg" /></div>
-                            </div>
-                          </div>
+                      {/*<div className="af-class-padding-section-large-3">*/}
+                      {/*  <div data-duration-in={400} data-duration-out={200} data-current="Tab 1" data-easing="ease" className="af-class-feedback-page_features-list_component w-tabs">*/}
+                      {/*    <div id="w-node-_2413b75c-d39f-3fa1-a52b-c1211bb60cbc-a53f92e2" className="af-class-feedback-page_features-list_tabs-menu w-tab-menu">*/}
+                      {/*      <a data-w-tab="Tab 1" className="af-class-feedback-page_features-list_tabs-link w-inline-block w-tab-link w--current">*/}
+                      {/*        <div className="af-class-margin-bottom af-class-margin-xsmall">*/}
+                      {/*          <h3 className="af-class-heading-style-h4">Feedback Categories: <br />Pitch, Tone, Timing</h3>*/}
+                      {/*        </div>*/}
+                      {/*        <p>Our feedback system analyzes the pitch, tone, and timing of your vocal imitation to provide detailed insights.</p>*/}
+                      {/*      </a>*/}
+                      {/*      <a data-w-tab="Tab 2" className="af-class-feedback-page_features-list_tabs-link w-inline-block w-tab-link">*/}
+                      {/*        <div className="af-class-margin-bottom af-class-margin-xsmall">*/}
+                      {/*          <h3 className="af-class-heading-style-h4">Pitch Analysis</h3>*/}
+                      {/*        </div>*/}
+                      {/*        <p>We evaluate the accuracy of your pitch compared to the original voice file or extracted voice.</p>*/}
+                      {/*      </a>*/}
+                      {/*      <a data-w-tab="Tab 3" className="af-class-feedback-page_features-list_tabs-link w-inline-block w-tab-link">*/}
+                      {/*        <div className="af-class-margin-bottom af-class-margin-xsmall">*/}
+                      {/*          <h3 className="af-class-heading-style-h4">Tone Analysis</h3>*/}
+                      {/*        </div>*/}
+                      {/*        <p>Our system assesses the similarity of your tone to the reference voice, providing valuable feedback for improvement.</p>*/}
+                      {/*      </a>*/}
+                      {/*    </div>*/}
+                      {/*    <div id="w-node-_2413b75c-d39f-3fa1-a52b-c1211bb60ccf-a53f92e2" className="w-tab-content">*/}
+                      {/*      <div data-w-tab="Tab 1" className="w-tab-pane w--tab-active">*/}
+                      {/*        <div className="af-class-feedback-page_features-list_image-wrapper"><img alt loading="lazy" src="images/GavR.gif" className="af-class-feedback-page_features-list_image" /></div>*/}
+                      {/*      </div>*/}
+                      {/*      <div data-w-tab="Tab 2" className="w-tab-pane">*/}
+                      {/*        <a href="#" className="af-class-feedback-page_features-list_lightbox w-inline-block w-lightbox"><img alt loading="lazy" src="images/placeholder-video-thumbnail.svg" className="af-class-feedback-page_features-list_lightbox-image" />*/}
+                      {/*          <div className="af-class-lightbox-play-icon">*/}
+                      {/*            <div className="af-class-icon-embed-large w-embed"><svg width="100%" height="100%" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">*/}
+                      {/*                <path fillRule="evenodd" clipRule="evenodd" d="M5.33301 32C5.33301 17.2724 17.2721 5.33334 31.9997 5.33334C39.0721 5.33334 45.8549 8.14286 50.8559 13.1438C55.8568 18.1448 58.6663 24.9276 58.6663 32C58.6663 46.7276 46.7273 58.6667 31.9997 58.6667C17.2721 58.6667 5.33301 46.7276 5.33301 32ZM27.1198 43.4134L42.6664 33.7067C43.2482 33.3341 43.6001 32.6909 43.6001 32C43.6001 31.3092 43.2482 30.6659 42.6664 30.2934L27.0664 20.5867C26.452 20.1993 25.6758 20.1755 25.0388 20.5244C24.4018 20.8734 24.004 21.5403 23.9998 22.2667V41.7334C23.9912 42.4774 24.3963 43.1647 25.0514 43.5174C25.7065 43.8702 26.5033 43.8301 27.1198 43.4134Z" fill="CurrentColor" />*/}
+                      {/*              </svg></div>*/}
+                      {/*          </div>*/}
+                      {/*          <div className="af-class-video-overlay-layer" />*/}
+                      {/*        </a>*/}
+                      {/*      </div>*/}
+                      {/*      <div data-w-tab="Tab 3" className="w-tab-pane">*/}
+                      {/*        <div className="af-class-feedback-page_features-list_image-wrapper"><img alt loading="lazy" src="images/placeholder-image.svg" /></div>*/}
+                      {/*      </div>*/}
+                      {/*    </div>*/}
+                      {/*  </div>*/}
+                        <div>
+                          <UserGrowthChart />
                         </div>
-                      </div>
+                      {/*</div>*/}
                     </div>
                   </div>
                 </section>

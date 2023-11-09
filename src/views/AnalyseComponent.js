@@ -6,6 +6,8 @@ const FeedbackReport = ({ data }) => {
   const [showReferenceAudio, setShowReferenceAudio] = useState(false);
   const [showUserAudio, setShowUserAudio] = useState(false);
   const [detailVisible, setDetailVisible] = useState(false);
+
+
   // 오디오 플레이어 토글 함수
   const toggleAudioPlayer = (playerType) => {
     if (playerType === 'reference') {
@@ -74,8 +76,11 @@ const FeedbackReport = ({ data }) => {
 };
 
 const AnalyseComponent = () => {
+  // 랜덤 스코어 생성
+  const randomScore = Math.floor(Math.random() * 100);
+
   const dummyData = {
-    score: 85,
+    score: randomScore, // 랜덤 스코어 사용
     audioLinks: {
       reference: 'audio/reference_voice.wav',
       user: 'audio/user_voice.wav'

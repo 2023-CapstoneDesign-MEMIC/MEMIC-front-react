@@ -1,0 +1,7 @@
+
+.graph-container {
+  width: 100%;       /* 전체 너비를 사용하도록 설정 */
+  max-width: 100%;  /* 최대 너비를 600px로 제한 */
+  height: 600px;     /* 높이를 400px로 설정 */
+  margin: 0 auto;    /* 중앙 정렬 */
+}

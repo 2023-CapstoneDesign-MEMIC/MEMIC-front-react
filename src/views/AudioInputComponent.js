@@ -47,7 +47,7 @@ const AudioInputComponent = () => {
         console.error('There was an error!', error);
       }
     } else {
-      alert('Please fill in all fields.');
+      alert('모든 필드를 채워주세요.');
     }
   };
 
