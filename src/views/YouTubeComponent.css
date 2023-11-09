@@ -7,7 +7,7 @@
   padding: 40px; /* Retained padding for a spacious layout */
   border-radius: 12px; /* Rounded corners for a modern look */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow for a subtle depth effect */
-  max-width: 650px; /* Maximum width to contain the component's width */
+  max-width: 600px; /* Maximum width to contain the component's width */
   margin: 20px auto; /* Centering the container */
 }
 
@@ -15,6 +15,12 @@
   color: #2c3e50; /* A dark color for contrast */
   font-weight: 600; /* Semi-bold font weight */
   margin-bottom: 30px; /* Space below the header */
+}
+
+.time-inputs {
+  display: flex; /* flexbox를 활용한 수평 정렬 */
+  gap: 10px; /* 입력 필드 사이의 간격 조절 */
+  margin-bottom: 10px; /* 버튼과의 간격 조절 */
 }
 
 .input-field {
@@ -25,6 +31,14 @@
   font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern sans-serif font */
   font-size: 16px; /* Readable font size */
   transition: border-color 0.3s ease; /* Smooth transition for interaction */
+}
+
+.full-width {
+  width: 100%; /* 컨테이너 전체 너비 사용 */
+}
+
+.time-field {
+  flex: 1; /* 각 입력 필드가 동일한 비율로 공간을 차지하도록 설정 */
 }
 
 .input-field:focus {
@@ -49,9 +63,8 @@
 
 .youtube-iframe {
   width: 100%; /* 입력 필드와 동일한 너비 */
-  /*height: auto; /* 비율에 맞는 자동 높이 설정 */
-  max-width: 650px; /* 컨테이너의 최대 너비와 동일하게 설정 */
+  /*height: 100%; /* 비율에 맞는 자동 높이 설정 */
+  max-width: 600px; /* 컨테이너의 최대 너비와 동일하게 설정 */
   border-radius: 5px; /* 입력 필드 스타일과 일치하는 테두리 둥근 처리 */
   margin-top: 10px; /* 텍스트 입력 필드와의 간격 조정 */
 }
-

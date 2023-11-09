@@ -169,13 +169,6 @@ class InputView extends React.Component {
                           <div>
                             <AudioInputComponent />
                           </div>
-                          <div className="af-class-margin-top af-class-margin-medium">
-                            <div className="af-class-cta26_form-block w-form">
-                              <form id="email-form" name="email-form" data-name="Email Form" method="get" className="af-class-cta26_form" data-wf-page-id="6527ec791dad3c4809c77288" data-wf-element-id="3ca21f2c-8a69-d47d-02b9-29ae37d582bf">
-                                <div className="af-class-text-size-tiny">[file format] .mp3,.wav,.flac,.aac</div>
-                              </form>
-                            </div>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -189,12 +182,11 @@ class InputView extends React.Component {
                               <div className="af-class-margin-bottom af-class-margin-small">
                                 <h1 className="af-class-text-color-white-3">No files? It's ok</h1>
                               </div>
-                              <p className="af-class-text-size-medium af-class-text-color-white">If you enter YouTube URL and timeline, ME:MIC extract a voice file.</p>
+                              <p className="af-class-text-size-medium af-class-text-color-white">YouTube 링크로 음원을 추출할 수 있습니다!</p>
                               <div className="af-class-margin-top af-class-margin-medium">
                                   <div>
                                       <YoutubeInputComponent />
                                   </div>
-                                  <div className="af-class-text-size-tiny af-class-text-color-white">Please enter the most accurate time possible!</div>
                               </div>
                             </div>
                           </div>
@@ -246,8 +238,8 @@ class InputView extends React.Component {
                             </div>
                           </div>
                           <div id="w-node-_2eedbf2d-1f87-6c4a-4e97-0a678355fac6-09c77288" className="af-class-upload-voice-file-or-input-youtube-url-link-with-timeline_4_cta_button-row">
-                            <a href="record" className="af-class-button w-button">Let's Record!</a>
-                            <a href="/" className="af-class-button af-class-is-secondary w-button">MAIN page</a>
+                            <a href="record" className="af-class-button af-class-is-secondary w-button">Let's Record!</a>
+                            <a href="/" className="af-class-button w-button">MAIN page</a>
                           </div>
                         </div>
                       </div>

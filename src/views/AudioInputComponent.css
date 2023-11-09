@@ -25,3 +25,22 @@
 .AudioInputComponent-successMessage {
   color: #28a745; /* Theme color for the success message */
 }
+
+.AudioInputComponent-time-inputs {
+  display: flex;
+  flex-direction: column; /* 세로 방향으로 스택 */
+  gap: 10px; /* 요소들 사이의 간격 */
+}
+.AudioInputComponent-input {
+  flex: 1; /* 입력 필드가 동일한 공간을 차지하도록 설정 */
+  /* 기존 스타일 유지 */
+}
+
+.AudioInputComponent-audioPlayer {
+  /*width: 100%; /* 전체 너비를 사용하도록 설정 */
+  margin-top: 10px; /* 오디오 플레이어 상단의 여백 */
+  border-radius: 5px; /* 테두리 둥글게 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  border: 1px solid #ddd; /* 경계선 스타일 */
+  background: #f9f9f9; /* 배경색 */
+}
