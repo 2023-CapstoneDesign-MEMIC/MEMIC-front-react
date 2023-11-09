@@ -71,7 +71,7 @@ const AudioInputComponent = () => {
             onChange={handleFileChange}
             className="AudioInputComponent-input" // Reused input class name for styling
           />
-          <button onClick={handleSubmit} className="af-class-button af-class-is-small w-button">Submit</button>
+          <button onClick={handleSubmit} className="af-class-button af-class-is-secondary af-class-is-small w-button">Submit</button>
         </>
       )}
     </div>

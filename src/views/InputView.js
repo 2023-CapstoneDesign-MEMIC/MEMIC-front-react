@@ -174,12 +174,6 @@ class InputView extends React.Component {
                               <form id="email-form" name="email-form" data-name="Email Form" method="get" className="af-class-cta26_form" data-wf-page-id="6527ec791dad3c4809c77288" data-wf-element-id="3ca21f2c-8a69-d47d-02b9-29ae37d582bf">
                                 <div className="af-class-text-size-tiny">[file format] .mp3,.wav,.flac,.aac</div>
                               </form>
-                              <div className="af-class-success-message w-form-done">
-                                <div className="af-class-success-text">Thank you! Your file has been received!</div>
-                              </div>
-                              <div className="af-class-error-message w-form-fail">
-                                <div className="af-class-error-text">Oops! Something went wrong. Please try again.</div>
-                              </div>
                             </div>
                           </div>
                         </div>

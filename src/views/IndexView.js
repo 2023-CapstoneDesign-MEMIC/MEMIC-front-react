@@ -266,7 +266,7 @@ class IndexView extends React.Component {
                           <p className="af-class-text-size-medium">Embark on a journey of vocal imitation with ME:MIC.</p>
                           <div className="af-class-margin-top af-class-margin-medium">
                             <div className="af-class-button-group af-class-is-center">
-                              <a href="fileupload" className="af-class-button w-button">Let's Start!</a>
+                              <a href="fileupload" className="af-class-button af-class-is-secondary af-class-is-small w-button">Let's Start!</a>
 
                             </div>
                           </div>

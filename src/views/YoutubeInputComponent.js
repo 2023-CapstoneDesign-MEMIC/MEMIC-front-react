@@ -4,11 +4,17 @@ import './YouTubeComponent.css'; // CSS 파일을 임포트합니다.
 
 const YouTubeComponent = () => {
   const [link, setLink] = useState('');
+  const [videoId, setVideoId] = useState('');
   const [start, setStart] = useState('');
   const [end, setEnd] = useState('');
 
   const handleLinkChange = (event) => {
-    setLink(event.target.value);
+    const url = event.target.value;
+    setLink(url);
+
+    // URL이 변경되면 videoId 상태를 업데이트합니다.
+    const videoIdMatch = url.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\s]{11})/i);
+    setVideoId(videoIdMatch ? videoIdMatch[1] : '');
   };
 
   const handleStartChange = (event) => {
@@ -51,6 +57,17 @@ const YouTubeComponent = () => {
         onChange={handleLinkChange}
         placeholder="YouTube 링크"
       />
+      {/* YouTube 영상 미리보기 */}
+      {videoId && (
+        <iframe title="YouTube video player" // 고유한 title 속성 추가
+          width="560"
+          height="315"
+          src={`https://www.youtube.com/embed/${videoId}`}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen className="youtube-iframe"
+        ></iframe>
+      )}
       <input
         className="input-field"
         type="text"
