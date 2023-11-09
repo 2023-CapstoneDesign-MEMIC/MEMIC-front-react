@@ -3,7 +3,7 @@
 import React from 'react'
 import { createScope, map, transformProxies } from './helpers'
 import AnalyseComponent from './AnalyseComponent';
-import YoutubeInputComponent from "./YoutubeInputComponent";
+import AdditionalCommentButton from './AdditionalCommentButton';
 
 const scripts = [
   { loading: fetch("https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6526603ca6ecfaa934a69294").then(body => body.text()), isAsync: false },
@@ -52,7 +52,18 @@ class FeedbackView extends React.Component {
       return active.isAsync ? next : loading
     }))
   }
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      showAdditionalComment: false // 여기서 추가 상태를 선언합니다.
+    };
+  }
+    // 추가 코멘트를 토글하는 메서드입니다.
+  toggleAdditionalComment = () => {
+    this.setState(prevState => ({
+      showAdditionalComment: !prevState.showAdditionalComment
+    }));
+  }
   render() {
     const proxies = FeedbackView.Controller !== FeedbackView ? transformProxies(this.props.children) : {
 
@@ -165,11 +176,12 @@ class FeedbackView extends React.Component {
                           <div className="af-class-margin-bottom af-class-margin-small">
                             <h1>Voice Report</h1>
                           </div>
-                          <p className="af-class-text-size-medium-2">Feedback just for you</p>
+                         <div>
+                    < AnalyseComponent/>
+                  </div>
                           <div className="af-class-margin-top af-class-margin-medium">
                             <div className="af-class-button-group af-class-is-center">
-                              <a href="#report" className="af-class-button w-button">Report page</a>
-                              <a href="record" className="af-class-button af-class-is-secondary w-button">Record Again?</a>
+                              <a href="#report" className="af-class-button w-button">세부분석</a>
                             </div>
                           </div>
                         </div>
@@ -188,35 +200,25 @@ class FeedbackView extends React.Component {
                               <h2 className="af-class-heading-3">Report of your voice imitation</h2>
                             </div>
                           </div>
-                          <div>
-                            < AnalyseComponent/>
-                          </div>
                           <div className="w-layout-grid af-class-layout250_list">
                             <div className="af-class-layout250_item">
                               <div className="af-class-margin-bottom af-class-margin-medium">
                                 <div className="af-class-home4-features_image-wrapper">
-                                  <div className="af-class-text-block"><strong>PERFECT!</strong></div>
+                                  <div className="af-class-text-block"><strong>1순위</strong></div>
                                   <h1 className="af-class-heading-4">85%</h1>
                                 </div>
                               </div>
                               <div className="af-class-margin-bottom af-class-margin-xsmall">
                                 <h3 className="af-class-heading-style-h5"><strong>Accuracy and Similarity</strong></h3>
                               </div>
-                              <p>"Your pitch closely matched the target voice, well done! The timbre of your voice is quite similar to the original. Keep it up! Consider working on matching the pitch more closely to improve accuracy."</p>
+                              <p>ㅋ,ㅌ,ㅍ,ㅆ 와 같은 격한 소리의 자음에 더 힘을 실어주세요!</p>
                               <div className="af-class-margin-top af-class-margin-medium">
-                                <div className="af-class-button-group">
-                                  <a href="#" className="af-class-button af-class-is-link af-class-is-icon w-inline-block">
-                                    <div>Additional comment</div>
-                                    <div className="af-class-icon-embed-xxsmall w-embed"><svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 3L11 8L6 13" stroke="CurrentColor" strokeWidth="1.5" />
-                                      </svg></div>
-                                  </a>
-                                </div>
+                                <AdditionalCommentButton endpoint="/api/comments/123" />
                               </div>
                             </div>
                             <div className="af-class-layout250_item">
                               <div className="af-class-margin-bottom af-class-margin-medium">
-                                <div className="af-class-text-block-2"><span className="af-class-text-span-2"><strong className="af-class-bold-text">GOOD!</strong></span></div>
+                                <div className="af-class-text-block-2"><span className="af-class-text-span-2"><strong className="af-class-bold-text">2순위</strong></span></div>
                                 <div className="af-class-home4-features_image-wrapper">
                                   <h1 className="af-class-heading-5">52%</h1>
                                 </div>
@@ -224,38 +226,24 @@ class FeedbackView extends React.Component {
                               <div className="af-class-margin-bottom af-class-margin-xsmall">
                                 <h3 className="af-class-heading-style-h5"><strong>Fluency and Rhythm</strong></h3>
                               </div>
-                              <p>"Your speech flow was smooth and consistent with the original voice. You captured the rhythm and pacing of the original voice effectively. Focus on maintaining a steady rhythm to enhance the imitation."</p>
+                              <p>ㅏ,ㅔ,ㅣ,ㅗ,ㅜ와 같은 모음 발음이 부정확해요!</p>
                               <div className="af-class-margin-top af-class-margin-medium">
-                                <div className="af-class-button-group">
-                                  <a href="#" className="af-class-button af-class-is-link af-class-is-icon w-inline-block">
-                                    <div>Additional comment</div>
-                                    <div className="af-class-icon-embed-xxsmall w-embed"><svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 3L11 8L6 13" stroke="CurrentColor" strokeWidth="1.5" />
-                                      </svg></div>
-                                  </a>
-                                </div>
+                                <AdditionalCommentButton endpoint="/api/comments/123" />
                               </div>
                             </div>
                             <div className="af-class-layout250_item">
                               <div className="af-class-margin-bottom af-class-margin-medium">
                                 <div className="af-class-home4-features_image-wrapper">
-                                  <div className="af-class-text-block-3"><strong>BAD</strong></div>
+                                  <div className="af-class-text-block-3"><strong>3순위</strong></div>
                                   <h1 className="af-class-heading-6">38%</h1>
                                 </div>
                               </div>
                               <div className="af-class-margin-bottom af-class-margin-xsmall">
                                 <h3 className="af-class-heading-style-h5"><strong>Pronunciation and Articulation</strong></h3>
                               </div>
-                              <p>"Your pronunciation is clear and closely resembles the target voice. Pay attention to the way certain words are pronounced in the original voice to enhance similarity. Your articulation of certain syllables can be improved for a closer match."</p>
+                              <p>발화 속도가 느려요! 조금 더 템포를 올려주세요.</p>
                               <div className="af-class-margin-top af-class-margin-medium">
-                                <div className="af-class-button-group">
-                                  <a href="#" className="af-class-button af-class-is-link af-class-is-icon w-inline-block">
-                                    <div>Additional comment</div>
-                                    <div className="af-class-icon-embed-xxsmall w-embed"><svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 3L11 8L6 13" stroke="CurrentColor" strokeWidth="1.5" />
-                                      </svg></div>
-                                  </a>
-                                </div>
+                                <AdditionalCommentButton endpoint="/api/comments/123" />
                               </div>
                             </div>
                           </div>
