@@ -13,6 +13,8 @@ python manage.py runserver
 ### react side
 
 ```
+npm install chart.js
+Nom install —save chart.js react-chartjs-2
 npm install axios
 npm start
 ```
