@@ -3,6 +3,7 @@
 import React from 'react'
 import { createScope, map, transformProxies } from './helpers'
 import AudioRecorder from './AudioRecorder'
+import AudioSubmitComponent from "./AudioSubmitComponent";
 const scripts = [
   { loading: fetch("https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6526603ca6ecfaa934a69294").then(body => body.text()), isAsync: false },
   { loading: fetch("js/webflow.js").then(body => body.text()), isAsync: false },
@@ -90,6 +91,7 @@ class RecordView extends React.Component {
                       </address>
                     </div>
                     <nav role="navigation" className="af-class-navbar12_menu af-class-is-page-height-tablet w-nav-menu">
+                      <a href="#Gallary" className="af-class-navbar12_link w-nav-link">Gallary</a>
                       <a href="#Report" className="af-class-navbar12_link w-nav-link">Report</a>
                       <div data-hover="true" data-delay={200} data-w-id="cdb04180-031c-bd6d-bf2c-3d77774365fc" className="af-class-navbar12_menu-dropdown w-dropdown">
                         <div className="af-class-navbar12_dropdown-toggle w-dropdown-toggle">
@@ -163,7 +165,7 @@ class RecordView extends React.Component {
                           <div className="af-class-margin-bottom af-class-margin-small">
                             <h1 className="af-class-heading-2">Record Your Voice</h1>
                           </div>
-                          <p className="af-class-text-size-medium"><span className="af-class-text-span">Show your vocal imitation skills </span></p>
+                          <p className="af-class-text-size-medium"><span className="af-class-text-span">당신의 성대모사 실력을 뽐내보세요!</span></p>
                           <div className="af-class-margin-top af-class-margin-medium">
                             <div>
                               <AudioRecorder />
@@ -173,6 +175,24 @@ class RecordView extends React.Component {
                       </div>
                     </div>
                   </div>
+                </section>
+                <section className="af-class-section_record-your-voice_cta">
+                  <header className="af-class-section_header62">
+                    <section />
+                    <div id="Gallary" className="af-class-padding-global-2">
+                      <div className="af-class-container-small">
+                        <div className="af-class-padding-section-large-3">
+                          <div className="af-class-text-align-center">
+                            <div className="af-class-margin-bottom af-class-margin-small">
+                              <h1>Voice Gallary</h1>
+                            </div>
+                            <p className="af-class-text-size-medium">제출이 완료된 녹음본을 들어보세요!</p>
+                            <AudioSubmitComponent />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </header>
                 </section>
                 <section className="af-class-section_record-your-voice_cta">
                   <header className="af-class-section_header62">
@@ -187,8 +207,8 @@ class RecordView extends React.Component {
                             <p className="af-class-text-size-medium">Uncover the Similarities of Your Voice Imitation</p>
                             <div className="af-class-margin-top af-class-margin-medium">
                               <div className="af-class-button-group af-class-is-center">
-                                <a href="feedback" className="af-class-button w-button">REPORT PAGE</a>
-                                <a href="fileupload" className="af-class-button af-class-is-secondary w-button">UPLOAD AGAIN</a>
+                                <a href="feedback" className="af-class-button af-class-is-secondary w-button">REPORT PAGE</a>
+                                <a href="fileupload" className="af-class-button w-button">UPLOAD AGAIN</a>
                               </div>
                             </div>
                           </div>
