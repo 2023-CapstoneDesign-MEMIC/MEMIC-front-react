@@ -3,7 +3,7 @@
 
 ### react side
 
-``
+```
 npm i ant
 npm install chart.js
 npm i react-chartjs-2 chart.js
@@ -14,7 +14,9 @@ npm install axios
 ```
 pip install djangorestframework
 pip install django-cors-headers
-#   'django.middleware.csrf.CsrfViewMiddleware',
+
+
+#   'django.middleware.csrf.CsrfViewMiddleware'
 ```
 
 
