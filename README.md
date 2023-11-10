@@ -4,7 +4,7 @@
 ### react side
 
 ```
-npm i ant
+npm i antd
 npm install chart.js
 npm i react-chartjs-2 chart.js
 npm install axios
