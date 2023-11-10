@@ -1,23 +1,22 @@
 ## 연동 방법
 
 
+### react side
+
+``
+npm i ant
+npm install chart.js
+npm i react-chartjs-2 chart.js
+npm install axios
+```
+
 ### django side
 ```
 pip install djangorestframework
 pip install django-cors-headers
 #   'django.middleware.csrf.CsrfViewMiddleware',
-
-python manage.py runserver
 ```
 
-### react side
-
-```
-npm install chart.js
-Nom install —save chart.js react-chartjs-2
-npm install axios
-npm start
-```
 
 ### 할 것
 
