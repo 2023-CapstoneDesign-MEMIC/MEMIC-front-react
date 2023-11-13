@@ -92,14 +92,14 @@ class FaqsView extends React.Component {
                     <nav role="navigation" className="af-class-navbar12_menu af-class-is-page-height-tablet w-nav-menu">
                     <div data-hover="true" data-delay={200} data-w-id="18a77209-24cc-8d26-8fa2-7e9adce00fa8" className="af-class-navbar12_menu-dropdown w-dropdown">
                       <div className="af-class-navbar12_dropdown-toggle w-dropdown-toggle">
-                        <div>More</div>
+                        <div>더보기</div>
                         <div className="af-class-dropdown-chevron w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" clipRule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor" />
                           </svg></div>
                       </div>
                       <nav data-w-id="18a77209-24cc-8d26-8fa2-7e9adce00fad" className="af-class-navbar12_dropdown-list w-dropdown-list">
                         <div className="af-class-navbar12_dropdown-link-list">
-                            <h4 className="af-class-text-size-small af-class-text-weight-semibold">Explore Our Pages</h4>
+                            <h4 className="af-class-text-size-small af-class-text-weight-semibold">페이지 둘러보기</h4>
                             <a href="fileupload" className="af-class-navbar12_dropdown-link w-inline-block">
                               <div className="af-class-navbar12_icon-wrapper">
                                 <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
@@ -107,8 +107,8 @@ class FaqsView extends React.Component {
                                   </svg></div>
                               </div>
                               <div className="af-class-navbar12_text-wrapper">
-                                <div className="af-class-text-weight-semibold">Input page</div>
-                                <p className="af-class-text-size-small af-class-hide-mobile-landscape">Learn more about our vocal imitation guide.</p>
+                                <div className="af-class-text-weight-semibold">입력 페이지</div>
+                                <p className="af-class-text-size-small af-class-hide-mobile-landscape">파일 입력 혹은 URL로 음성을 추출하세요.</p>
                               </div>
                             </a>
                             <a href="record" className="af-class-navbar12_dropdown-link w-inline-block">
@@ -118,8 +118,8 @@ class FaqsView extends React.Component {
                                   </svg></div>
                               </div>
                               <div className="af-class-navbar12_text-wrapper">
-                                <div className="af-class-text-weight-semibold">Recording page</div>
-                                <p className="af-class-text-size-small af-class-hide-mobile-landscape">Record your own voice for vocal imitation.</p>
+                                <div className="af-class-text-weight-semibold">녹음 페이지</div>
+                                <p className="af-class-text-size-small af-class-hide-mobile-landscape">여러분의 성대모사 실력을 뽐내세요.</p>
                               </div>
                             </a>
                             <a href="feedback" className="af-class-navbar12_dropdown-link w-inline-block">
@@ -129,8 +129,8 @@ class FaqsView extends React.Component {
                                   </svg></div>
                               </div>
                               <div className="af-class-navbar12_text-wrapper">
-                                <div className="af-class-text-weight-semibold">Report page</div>
-                                <p className="af-class-text-size-small af-class-hide-mobile-landscape">Analyze the similarity between your voice and the target voice.</p>
+                                <div className="af-class-text-weight-semibold">피드백 페이지</div>
+                                <p className="af-class-text-size-small af-class-hide-mobile-landscape">유사도에 따른 피드백을 제공합니다.</p>
                               </div>
                             </a>
                             <a href="faqs" className="af-class-navbar12_dropdown-link w-inline-block">
@@ -140,8 +140,8 @@ class FaqsView extends React.Component {
                                   </svg></div>
                               </div>
                               <div className="af-class-navbar12_text-wrapper">
-                                <div className="af-class-text-weight-semibold">FAQs</div>
-                                <p className="af-class-text-size-small af-class-hide-mobile-landscape">Receive feedback based on the similarity of your vocal imitation.</p>
+                                <div className="af-class-text-weight-semibold">자주 묻는 질문</div>
+                                <p className="af-class-text-size-small af-class-hide-mobile-landscape">무엇이든 찾아보세요.</p>
                               </div>
                             </a>
                           </div>

@@ -84,7 +84,7 @@ const AudioSubmitComponent = () => {
           )}
         </div>
       ))}
-      <button onClick={handleSubmit} className="af-class-button af-class-is-secondary w-button">Submit</button>
+      <button onClick={handleSubmit} className="af-class-button af-class-is-secondary w-button">제출하기</button>
     </div>
   );
 };

@@ -88,7 +88,7 @@ const AudioInputComponent = () => {
             className="AudioInputComponent-input"
           />
           <div className="af-class-text-size-tiny">[file format] .mp3,.wav,.flac,.aac</div>
-          <button onClick={handleSubmit} className="af-class-button af-class-is-secondary af-class-is-small w-button">Submit</button>
+          <button onClick={handleSubmit} className="af-class-button af-class-is-secondary af-class-is-small w-button">업로드하기</button>
         </>
       )}
     </div>

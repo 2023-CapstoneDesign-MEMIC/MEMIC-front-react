@@ -94,17 +94,18 @@ class InputView extends React.Component {
                         </address>
                       </div>
                       <nav role="navigation" className="af-class-navbar12_menu af-class-is-page-height-tablet w-nav-menu">
-                        <a href="#Spleeter" className="af-class-navbar12_link w-nav-link">Spleeter</a>
+                        <a href="#Spleeter" className="af-class-navbar12_link w-nav-link">음성추출</a>
+                        <a href="#Record" className="af-class-navbar12_link w-nav-link">녹음하기</a>
                         <div data-hover="true" data-delay={200} data-w-id="d9812076-6b1d-1530-a77a-30bd6a450469" className="af-class-navbar12_menu-dropdown w-dropdown">
                           <div className="af-class-navbar12_dropdown-toggle w-dropdown-toggle">
-                            <div>More</div>
+                            <div>더보기</div>
                             <div className="af-class-dropdown-chevron w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fillRule="evenodd" clipRule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor" />
                               </svg></div>
                           </div>
                           <nav data-w-id="d9812076-6b1d-1530-a77a-30bd6a45046e" className="af-class-navbar12_dropdown-list w-dropdown-list">
                             <div className="af-class-navbar12_dropdown-link-list">
-                                <h4 className="af-class-text-size-small af-class-text-weight-semibold">Explore Our Pages</h4>
+                                <h4 className="af-class-text-size-small af-class-text-weight-semibold">페이지 둘러보기</h4>
                                 <a href="fileupload" aria-current="page" className="af-class-navbar12_dropdown-link w-inline-block w--current">
                                   <div className="af-class-navbar12_icon-wrapper">
                                     <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
@@ -112,8 +113,8 @@ class InputView extends React.Component {
                                       </svg></div>
                                   </div>
                                   <div className="af-class-navbar12_text-wrapper">
-                                    <div className="af-class-text-weight-semibold">Input page</div>
-                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">Learn more about our vocal imitation guide.</p>
+                                    <div className="af-class-text-weight-semibold">입력 페이지</div>
+                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">파일 입력 혹은 URL로 음성을 추출하세요.</p>
                                   </div>
                                 </a>
                                 <a href="record" className="af-class-navbar12_dropdown-link w-inline-block">
@@ -123,8 +124,8 @@ class InputView extends React.Component {
                                       </svg></div>
                                   </div>
                                   <div className="af-class-navbar12_text-wrapper">
-                                    <div className="af-class-text-weight-semibold">Recording page</div>
-                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">Record your own voice for vocal imitation.</p>
+                                    <div className="af-class-text-weight-semibold">녹음 페이지</div>
+                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">여러분의 성대모사 실력을 뽐내세요.</p>
                                   </div>
                                 </a>
                                 <a href="feedback" className="af-class-navbar12_dropdown-link w-inline-block">
@@ -134,8 +135,8 @@ class InputView extends React.Component {
                                       </svg></div>
                                   </div>
                                   <div className="af-class-navbar12_text-wrapper">
-                                    <div className="af-class-text-weight-semibold">Report page</div>
-                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">Analyze the similarity between your voice and the target voice.</p>
+                                    <div className="af-class-text-weight-semibold">피드백 페이지</div>
+                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">유사도에 따른 피드백을 제공합니다.</p>
                                   </div>
                                 </a>
                                 <a href="faqs" className="af-class-navbar12_dropdown-link w-inline-block">
@@ -145,16 +146,16 @@ class InputView extends React.Component {
                                       </svg></div>
                                   </div>
                                   <div className="af-class-navbar12_text-wrapper">
-                                    <div className="af-class-text-weight-semibold">FAQs</div>
-                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">Receive feedback based on the similarity of your vocal imitation.</p>
+                                    <div className="af-class-text-weight-semibold">자주 묻는 질문</div>
+                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">무엇이든 찾아보세요.</p>
                                   </div>
                                 </a>
                               </div>
                           </nav>
                         </div>
                         <div className="af-class-navbar12_menu-buttons">
-                          <a href="#" className="af-class-button af-class-is-secondary af-class-is-small w-button">Sign Up</a>
-                          <a href="#" className="af-class-button af-class-is-small w-button">Log In</a>
+                          <a href="#" className="af-class-button af-class-is-secondary af-class-is-small w-button">회원가입</a>
+                          <a href="#" className="af-class-button af-class-is-small w-button">로그인</a>
                         </div>
                       </nav>
                     </div>
@@ -164,7 +165,7 @@ class InputView extends React.Component {
                       <div className="af-class-padding-section-large-2">
                         <div className="af-class-text-align-center">
                           <div className="af-class-margin-bottom af-class-margin-small">
-                            <h1>Upload Your Voice File</h1>
+                            <h2>음성파일을 업로드하세요</h2>
                           </div>
                           <div>
                             <AudioInputComponent />
@@ -180,9 +181,9 @@ class InputView extends React.Component {
                           <div className="af-class-padding-section-large-3">
                             <div className="af-class-text-align-center">
                               <div className="af-class-margin-bottom af-class-margin-small">
-                                <h1 className="af-class-text-color-white-3">No files? It's ok</h1>
+                                <h2 className="af-class-text-color-white-3">YouTube 링크를 입력하세요</h2>
                               </div>
-                              <p className="af-class-text-size-medium af-class-text-color-white">YouTube 링크로 음원을 추출할 수 있습니다!</p>
+                              <p className="af-class-text-size-medium af-class-text-color-white">파일이 없어도 음성추출이 가능합니다.</p>
                               <div className="af-class-margin-top af-class-margin-medium">
                                   <div>
                                       <YoutubeInputComponent />
@@ -231,15 +232,15 @@ class InputView extends React.Component {
                         <div className="af-class-upload-voice-file-or-input-youtube-url-link-with-timeline_4_cta_component">
                           <div className="af-class-upload-voice-file-or-input-youtube-url-link-with-timeline_4_cta_content">
                             <div className="af-class-max-width-large">
-                              <div className="af-class-margin-bottom af-class-margin-xsmall">
-                                <h3 className="af-class-heading-7">Now, show your vocal skills</h3>
+                              <div id="Record" className="af-class-margin-bottom af-class-margin-xsmall">
+                                <h3 className="af-class-heading-7">성대모사 실력을 보여주세요</h3>
                               </div>
-                              <p className="af-class-text-size-medium">Record Your Vocal Imitation now!</p>
+                              <p className="af-class-text-size-medium">성대모사 녹음과 원본음성을 비교하세요.</p>
                             </div>
                           </div>
                           <div id="w-node-_2eedbf2d-1f87-6c4a-4e97-0a678355fac6-09c77288" className="af-class-upload-voice-file-or-input-youtube-url-link-with-timeline_4_cta_button-row">
-                            <a href="record" className="af-class-button af-class-is-secondary w-button">Let's Record!</a>
-                            <a href="/" className="af-class-button w-button">MAIN page</a>
+                            <a href="record" className="af-class-button af-class-is-secondary w-button">녹음하기</a>
+                            <a href="/" className="af-class-button w-button">메인페이지</a>
                           </div>
                         </div>
                       </div>

@@ -42,7 +42,7 @@ const FeedbackReport = ({ data }) => {
 
   return (
     <div className="report-container">
-      <h2 className="title">전체 점수</h2>
+      <h3 className="title">총평</h3>
       <p className="score">{data.score}%</p>
       {scoreChart}
       {/* 점수에 따른 멘트 표시 */}

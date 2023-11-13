@@ -49,13 +49,13 @@ const YouTubeComponent = () => {
 
   return (
     <div className="container">
-      <h3>Audio Spleeter</h3>
+      <h4>유튜브에서 음성 추출하기</h4>
       <input
         className="input-field"
         type="text"
         value={link}
         onChange={handleLinkChange}
-        placeholder="YouTube 링크"
+        placeholder="YouTube 링크를 입력하세요."
       />
       {/* YouTube 영상 미리보기 */}
       {videoId && (
@@ -88,7 +88,7 @@ const YouTubeComponent = () => {
           </div>
         </>
       )}
-      <button className="af-class-button af-class-is-small w-button" onClick={handleSubmit}>Submit</button>
+      <button className="af-class-button af-class-is-small w-button" onClick={handleSubmit}>추출하기</button>
     </div>
   );
 };

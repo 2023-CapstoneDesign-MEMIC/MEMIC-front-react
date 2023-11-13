@@ -71,7 +71,7 @@ const AudioRecorder = () => {
             onClick={isRecording ? stopRecording : startRecording}
             className="af-class-button af-class-is-small w-button"
           >
-            {isRecording ? 'Stop Recording' : hasRecorded ? 'Retry?' : 'Start Recording'}
+            {isRecording ? '성대모사 끝내기' : hasRecorded ? '다시하기' : '성대모사 시작'}
           </button>
           {audioURL && (
             <>
@@ -80,7 +80,7 @@ const AudioRecorder = () => {
                 onClick={submitRecording}
                 className="af-class-button af-class-is-small w-button"
               >
-                Submit Recording
+                제출하기
               </button>
             </>
           )}

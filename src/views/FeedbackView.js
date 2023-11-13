@@ -107,14 +107,14 @@ class FeedbackView extends React.Component {
                         {/*<a href="#" className="af-class-navbar12_link w-nav-link">Start Now</a>*/}
                         <div data-hover="true" data-delay={200} data-w-id="7b6858cc-3e06-ad26-979c-0d153f94f125" className="af-class-navbar12_menu-dropdown w-dropdown">
                           <div className="af-class-navbar12_dropdown-toggle w-dropdown-toggle">
-                            <div>More</div>
+                            <div>더보기</div>
                             <div className="af-class-dropdown-chevron w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fillRule="evenodd" clipRule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor" />
                               </svg></div>
                           </div>
                           <nav data-w-id="7b6858cc-3e06-ad26-979c-0d153f94f12a" className="af-class-navbar12_dropdown-list w-dropdown-list">
                             <div className="af-class-navbar12_dropdown-link-list">
-                                <h4 className="af-class-text-size-small af-class-text-weight-semibold">Explore Our Pages</h4>
+                                <h4 className="af-class-text-size-small af-class-text-weight-semibold">페이지 둘러보기</h4>
                                 <a href="fileupload" className="af-class-navbar12_dropdown-link w-inline-block">
                                   <div className="af-class-navbar12_icon-wrapper">
                                     <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
@@ -122,8 +122,8 @@ class FeedbackView extends React.Component {
                                       </svg></div>
                                   </div>
                                   <div className="af-class-navbar12_text-wrapper">
-                                    <div className="af-class-text-weight-semibold">Input page</div>
-                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">Learn more about our vocal imitation guide.</p>
+                                    <div className="af-class-text-weight-semibold">입력 페이지</div>
+                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">파일 입력 혹은 URL로 음성을 추출하세요.</p>
                                   </div>
                                 </a>
                                 <a href="record" className="af-class-navbar12_dropdown-link w-inline-block">
@@ -133,8 +133,8 @@ class FeedbackView extends React.Component {
                                       </svg></div>
                                   </div>
                                   <div className="af-class-navbar12_text-wrapper">
-                                    <div className="af-class-text-weight-semibold">Recording page</div>
-                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">Record your own voice for vocal imitation.</p>
+                                    <div className="af-class-text-weight-semibold">녹음 페이지</div>
+                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">여러분의 성대모사 실력을 뽐내세요.</p>
                                   </div>
                                 </a>
                                 <a href="feedback" aria-current="page" className="af-class-navbar12_dropdown-link w-inline-block w--current">
@@ -144,8 +144,8 @@ class FeedbackView extends React.Component {
                                       </svg></div>
                                   </div>
                                   <div className="af-class-navbar12_text-wrapper">
-                                    <div className="af-class-text-weight-semibold">Report page</div>
-                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">Analyze the similarity between your voice and the target voice.</p>
+                                    <div className="af-class-text-weight-semibold">피드백 페이지</div>
+                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">유사도에 따른 피드백을 제공합니다.</p>
                                   </div>
                                 </a>
                                 <a href="faqs" className="af-class-navbar12_dropdown-link w-inline-block">
@@ -155,16 +155,16 @@ class FeedbackView extends React.Component {
                                       </svg></div>
                                   </div>
                                   <div className="af-class-navbar12_text-wrapper">
-                                    <div className="af-class-text-weight-semibold">FAQs</div>
-                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">Receive feedback based on the similarity of your vocal imitation.</p>
+                                    <div className="af-class-text-weight-semibold">자주 묻는 질문</div>
+                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">무엇이든 찾아보세요.</p>
                                   </div>
                                 </a>
                               </div>
                           </nav>
                         </div>
                         <div className="af-class-navbar12_menu-buttons">
-                          <a href="#" className="af-class-button af-class-is-secondary af-class-is-small w-button">Sign Up</a>
-                          <a href="#" className="af-class-button af-class-is-small w-button">Log In</a>
+                          <a href="#" className="af-class-button af-class-is-secondary af-class-is-small w-button">회원가입</a>
+                          <a href="#" className="af-class-button af-class-is-small w-button">로그인</a>
                         </div>
                       </nav>
                     </div>
@@ -174,11 +174,11 @@ class FeedbackView extends React.Component {
                       <div className="af-class-padding-section-large-3">
                         <div className="af-class-text-align-center">
                           <div className="af-class-margin-bottom af-class-margin-small">
-                            <h1>Voice Report</h1>
+                            <a href="#repo"><h1>성대모사 평가</h1></a>
                           </div>
-                         <div>
-                    < AnalyseComponent/>
-                  </div>
+                          <div id='repo'>
+                            < AnalyseComponent/>
+                          </div>
                           <div className="af-class-margin-top af-class-margin-medium">
                             <div className="af-class-button-group af-class-is-center">
                               <a href="#report" className="af-class-button w-button">세부분석</a>
@@ -197,7 +197,7 @@ class FeedbackView extends React.Component {
                         <div className="af-class-layout250_component">
                           <div className="af-class-margin-bottom af-class-margin-xxlarge">
                             <div className="af-class-max-width-large">
-                              <h2 className="af-class-heading-3">Report of your voice imitation</h2>
+                              <h2 className="af-class-heading-3">피드백 보기</h2>
                             </div>
                           </div>
                           <div className="w-layout-grid af-class-layout250_list">
@@ -311,14 +311,14 @@ class FeedbackView extends React.Component {
                           <div className="af-class-feedback-page_cta_content">
                             <div className="af-class-max-width-large">
                               <div className="af-class-margin-bottom af-class-margin-xsmall">
-                                <h3>Share Your Results with Friends!</h3>
+                                <h3>여러분의 성장 결과를<br/>친구들과 공유하세요</h3>
                               </div>
-                              <p className="af-class-text-size-medium-2">Encourage others to try vocal imitation and share their results.</p>
+                              <p className="af-class-text-size-medium-2"></p>
                             </div>
                           </div>
                           <div className="af-class-feedback-page_cta_button-row">
-                            <a href="#" className="af-class-button w-button">Share</a>
-                            <a href="#" className="af-class-button af-class-is-secondary w-button">Try</a>
+                            <a href="#" className="af-class-button af-class-is-secondary w-button">공유하기</a>
+                            <a href="/" className="af-class-button w-button">시작화면</a>
                           </div>
                         </div>
                       </div>
