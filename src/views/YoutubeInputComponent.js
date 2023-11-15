@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './YouTubeComponent.css'; // CSS 파일을 임포트합니다.
 
+//----csrf error solve----//
+axios.defaults.xsrfCookieName = 'csrftoken';
+axios.defaults.xsrfHeaderName = 'X-CSRFTOKEN';
+
+
 const YouTubeComponent = () => {
   const [link, setLink] = useState('');
   const [videoId, setVideoId] = useState('');
@@ -94,3 +99,4 @@ const YouTubeComponent = () => {
 };
 
 export default YouTubeComponent;
+
