@@ -148,8 +148,8 @@ class FaqsView extends React.Component {
                       </nav>
                       </div>
                       <div className="af-class-navbar12_menu-buttons">
-                        <a href="#" className="af-class-button af-class-is-secondary af-class-is-small w-button">Sign Up</a>
-                        <a href="#" className="af-class-button af-class-is-small w-button">Log In</a>
+                        <a href="#" className="af-class-button af-class-is-secondary af-class-is-small w-button">회원가입</a>
+                        <a href="#" className="af-class-button af-class-is-small w-button">로그인</a>
                       </div>
                     </nav>
                   </div>
@@ -181,7 +181,7 @@ class FaqsView extends React.Component {
                           <div className="af-class-text-align-center">
                             <div className="af-class-max-width-large af-class-align-center">
                               <div className="af-class-margin-bottom af-class-margin-small">
-                                <h2>FAQs</h2>
+                                <h2>자주 묻는 질문</h2>
                               </div>
                             </div>
                           </div>
@@ -316,11 +316,11 @@ class FaqsView extends React.Component {
                           <div className="af-class-text-align-center">
                             <div className="af-class-max-width-medium af-class-align-center">
                               <div className="af-class-margin-bottom af-class-margin-xsmall">
-                                <h4>Still have questions?</h4>
+                                <h4>여전히 문제가 발생한다면</h4>
                               </div>
-                              <p className="af-class-text-size-medium">Feel free to reach out to us</p>
+                              <p className="af-class-text-size-medium">무엇이든 물어보세요.</p>
                               <div className="af-class-margin-top af-class-margin-medium">
-                                <a href="#" className="af-class-button af-class-is-secondary w-button">Contact</a>
+                                <a href="#" className="af-class-button af-class-is-secondary w-button">연락하기</a>
                               </div>
                             </div>
                           </div>
