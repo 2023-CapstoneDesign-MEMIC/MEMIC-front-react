@@ -1,7 +1,7 @@
 ```
+npm install
 npm install chart.js
 npm i react-chartjs-2 chart.js
-npm install axios
 ```
 
 ### TO DO
