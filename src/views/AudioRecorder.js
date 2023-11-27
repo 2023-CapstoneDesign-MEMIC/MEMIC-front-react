@@ -46,7 +46,7 @@ const AudioRecorder = () => {
     try {
       const audioBlob = await fetch(audioURL).then(r => r.blob());
       const formData = new FormData();
-      formData.append('audio_file', audioBlob, 'recording.mp3');
+      formData.append('audio_file', audioBlob, 'recording.wav');
 
       const response = await axios.post('http://127.0.0.1:8000/record/', formData, {
         headers: {
