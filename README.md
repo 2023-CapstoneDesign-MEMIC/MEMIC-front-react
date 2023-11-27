@@ -2,6 +2,7 @@
 npm install
 npm install chart.js
 npm i react-chartjs-2 chart.js
+pip install django-cors-headers
 ```
 
 ### TO DO
