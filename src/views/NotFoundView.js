@@ -14,21 +14,21 @@ class NotFoundView extends React.Component {
   static get Controller() {
     if (Controller) return Controller
 
-    try {
-      Controller = require('../controllers/NotFoundController')
-      Controller = Controller.default || Controller
-
-      return Controller
-    }
-    catch (e) {
-      if (e.code == 'MODULE_NOT_FOUND') {
-        Controller = NotFoundView
-
-        return Controller
-      }
-
-      throw e
-    }
+    // try {
+    //   Controller = require('../controllers/NotFoundController')
+    //   Controller = Controller.default || Controller
+    //
+    //   return Controller
+    // }
+    // catch (e) {
+    //   if (e.code == 'MODULE_NOT_FOUND') {
+    //     Controller = NotFoundView
+    //
+    //     return Controller
+    //   }
+    //
+    //   throw e
+    // }
   }
 
   componentDidMount() {

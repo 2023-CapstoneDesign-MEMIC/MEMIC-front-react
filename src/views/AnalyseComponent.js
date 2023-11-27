@@ -5,6 +5,7 @@ import ScoreChart from './ScoreChart';
 const FeedbackReport = ({ data }) => {
   const [showReferenceAudio, setShowReferenceAudio] = useState(false);
   const [showUserAudio, setShowUserAudio] = useState(false);
+  // eslint-disable-next-line
   const [detailVisible, setDetailVisible] = useState(false);
 
 

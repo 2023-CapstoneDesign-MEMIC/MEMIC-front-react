@@ -16,21 +16,21 @@ class InputView extends React.Component {
   static get Controller() {
     if (Controller) return Controller
 
-    try {
-      Controller = require('../controllers/InputController')
-      Controller = Controller.default || Controller
-
-      return Controller
-    }
-    catch (e) {
-      if (e.code == 'MODULE_NOT_FOUND') {
-        Controller = InputView
-
-        return Controller
-      }
-
-      throw e
-    }
+    // try {
+    //   Controller = require('../controllers/InputController')
+    //   Controller = Controller.default || Controller
+    //
+    //   return Controller
+    // }
+    // catch (e) {
+    //   if (e.code == 'MODULE_NOT_FOUND') {
+    //     Controller = InputView
+    //
+    //     return Controller
+    //   }
+    //
+    //   throw e
+    // }
   }
 
   componentDidMount() {

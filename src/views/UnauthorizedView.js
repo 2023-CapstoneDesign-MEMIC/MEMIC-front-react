@@ -15,21 +15,21 @@ class UnauthorizedView extends React.Component {
   static get Controller() {
     if (Controller) return Controller
 
-    try {
-      Controller = require('../controllers/UnauthorizedController')
-      Controller = Controller.default || Controller
-
-      return Controller
-    }
-    catch (e) {
-      if (e.code == 'MODULE_NOT_FOUND') {
-        Controller = UnauthorizedView
-
-        return Controller
-      }
-
-      throw e
-    }
+    // try {
+    //   Controller = require('../controllers/UnauthorizedController')
+    //   Controller = Controller.default || Controller
+    //
+    //   return Controller
+    // }
+    // catch (e) {
+    //   if (e.code == 'MODULE_NOT_FOUND') {
+    //     Controller = UnauthorizedView
+    //
+    //     return Controller
+    //   }
+    //
+    //   throw e
+    // }
   }
 
   componentDidMount() {

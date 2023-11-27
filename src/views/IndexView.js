@@ -14,20 +14,20 @@ class IndexView extends React.Component {
     static get Controller() {
         if (Controller) return Controller
 
-        try {
-            Controller = require('../controllers/IndexController')
-            Controller = Controller.default || Controller
-
-            return Controller
-        } catch (e) {
-            if (e.code == 'MODULE_NOT_FOUND') {
-                Controller = IndexView
-
-                return Controller
-            }
-
-            throw e
-        }
+        // try {
+        //     Controller = require('../controllers/IndexController')
+        //     Controller = Controller.default || Controller
+        //
+        //     return Controller
+        // } catch (e) {
+        //     if (e.code == 'MODULE_NOT_FOUND') {
+        //         Controller = IndexView
+        //
+        //         return Controller
+        //     }
+        //
+        //     throw e
+        // }
     }
 
     componentDidMount() {

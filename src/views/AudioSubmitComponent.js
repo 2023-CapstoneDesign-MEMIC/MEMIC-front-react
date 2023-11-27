@@ -7,6 +7,7 @@ const AudioSubmitComponent = () => {
   const [start, setStart] = useState(''); // 시작 시간
   const [end, setEnd] = useState(''); // 종료 시간
   // 재생할 오디오 파일의 URL을 저장할 새로운 상태
+  // eslint-disable-next-line
   const [audioPreviewUrl, setAudioPreviewUrl] = useState(null);
   const [audioPlayerVisible, setAudioPlayerVisible] = useState({});
 
@@ -32,10 +33,12 @@ const AudioSubmitComponent = () => {
     ]);
   }, []);
 
+  // eslint-disable-next-line
   const handleStartChange = (event) => {
     setStart(event.target.value);
   };
 
+  // eslint-disable-next-line
   const handleEndChange = (event) => {
     setEnd(event.target.value);
   };
