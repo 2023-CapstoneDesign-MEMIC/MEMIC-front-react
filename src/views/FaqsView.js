@@ -147,10 +147,6 @@ class FaqsView extends React.Component {
                           </div>
                       </nav>
                       </div>
-                      <div className="af-class-navbar12_menu-buttons">
-                        <a href="#" className="af-class-button af-class-is-secondary af-class-is-small w-button">회원가입</a>
-                        <a href="#" className="af-class-button af-class-is-small w-button">로그인</a>
-                      </div>
                     </nav>
                   </div>
                 </div>

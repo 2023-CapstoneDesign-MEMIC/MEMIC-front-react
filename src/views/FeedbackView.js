@@ -7,6 +7,7 @@ import AdditionalCommentButton from './AdditionalCommentButton';
 import ACB2 from './ACB2'
 import ACB3 from './ACB3'
 import UserGrowthChart from './UserGrowthChart'
+import ShareLinkComponent from "./ShareLinkComponent";
 
 const scripts = [
   { loading: fetch("https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6526603ca6ecfaa934a69294").then(body => body.text()), isAsync: false },
@@ -86,69 +87,72 @@ class FeedbackView extends React.Component {
                         </address>
                       </div>
                       <nav role="navigation" className="af-class-navbar12_menu af-class-is-page-height-tablet w-nav-menu">
-                        {/*<a href="#" className="af-class-navbar12_link w-nav-link">Start Now</a>*/}
-                        <div data-hover="true" data-delay={200} data-w-id="7b6858cc-3e06-ad26-979c-0d153f94f125" className="af-class-navbar12_menu-dropdown w-dropdown">
-                          <div className="af-class-navbar12_dropdown-toggle w-dropdown-toggle">
-                            <div>더보기</div>
-                            <div className="af-class-dropdown-chevron w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fillRule="evenodd" clipRule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor" />
-                              </svg></div>
-                          </div>
-                          <nav data-w-id="7b6858cc-3e06-ad26-979c-0d153f94f12a" className="af-class-navbar12_dropdown-list w-dropdown-list">
-                            <div className="af-class-navbar12_dropdown-link-list">
-                                <h4 className="af-class-text-size-small af-class-text-weight-semibold">페이지 둘러보기</h4>
-                                <a href="fileupload" className="af-class-navbar12_dropdown-link w-inline-block">
-                                  <div className="af-class-navbar12_icon-wrapper">
-                                    <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01L12.01 11L8 15.01z" />
-                                      </svg></div>
-                                  </div>
-                                  <div className="af-class-navbar12_text-wrapper">
-                                    <div className="af-class-text-weight-semibold">입력 페이지</div>
-                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">파일 입력 혹은 URL로 음성을 추출하세요.</p>
-                                  </div>
-                                </a>
-                                <a href="record" className="af-class-navbar12_dropdown-link w-inline-block">
-                                  <div className="af-class-navbar12_icon-wrapper">
-                                    <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15a.998.998 0 0 0-.98-.85c-.61 0-1.09.54-1 1.14c.49 3 2.89 5.35 5.91 5.78V20c0 .55.45 1 1 1s1-.45 1-1v-2.08a6.993 6.993 0 0 0 5.91-5.78c.1-.6-.39-1.14-1-1.14z" />
-                                      </svg></div>
-                                  </div>
-                                  <div className="af-class-navbar12_text-wrapper">
-                                    <div className="af-class-text-weight-semibold">녹음 페이지</div>
-                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">여러분의 성대모사 실력을 뽐내세요.</p>
-                                  </div>
-                                </a>
-                                <a href="feedback" aria-current="page" className="af-class-navbar12_dropdown-link w-inline-block w--current">
-                                  <div className="af-class-navbar12_icon-wrapper">
-                                    <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M20 19.59V8l-6-6H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c.45 0 .85-.15 1.19-.4l-4.43-4.43c-.8.52-1.74.83-2.76.83c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5c0 1.02-.31 1.96-.83 2.75L20 19.59zM9 13c0 1.66 1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3s-3 1.34-3 3z" />
-                                      </svg></div>
-                                  </div>
-                                  <div className="af-class-navbar12_text-wrapper">
-                                    <div className="af-class-text-weight-semibold">피드백 페이지</div>
-                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">유사도에 따른 피드백을 제공합니다.</p>
-                                  </div>
-                                </a>
-                                <a href="faqs" className="af-class-navbar12_dropdown-link w-inline-block">
-                                  <div className="af-class-navbar12_icon-wrapper">
-                                    <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zm-9-4h2v2h-2zm0-6h2v4h-2z" />
-                                      </svg></div>
-                                  </div>
-                                  <div className="af-class-navbar12_text-wrapper">
-                                    <div className="af-class-text-weight-semibold">자주 묻는 질문</div>
-                                    <p className="af-class-text-size-small af-class-hide-mobile-landscape">무엇이든 찾아보세요.</p>
-                                  </div>
-                                </a>
-                              </div>
-                          </nav>
-                        </div>
-                        <div className="af-class-navbar12_menu-buttons">
-                          <a href="#" className="af-class-button af-class-is-secondary af-class-is-small w-button">회원가입</a>
-                          <a href="#" className="af-class-button af-class-is-small w-button">로그인</a>
-                        </div>
+                        <a href="#report" className="af-class-navbar12_link w-nav-link">피드백 보기</a>
                       </nav>
+                      {/*<nav role="navigation" className="af-class-navbar12_menu af-class-is-page-height-tablet w-nav-menu">*/}
+                      {/*  /!*<a href="#" className="af-class-navbar12_link w-nav-link">Start Now</a>*!/*/}
+                      {/*  <div data-hover="true" data-delay={200} data-w-id="7b6858cc-3e06-ad26-979c-0d153f94f125" className="af-class-navbar12_menu-dropdown w-dropdown">*/}
+                      {/*    <div className="af-class-navbar12_dropdown-toggle w-dropdown-toggle">*/}
+                      {/*      <div>더보기</div>*/}
+                      {/*      <div className="af-class-dropdown-chevron w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">*/}
+                      {/*          <path fillRule="evenodd" clipRule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor" />*/}
+                      {/*        </svg></div>*/}
+                      {/*    </div>*/}
+                      {/*    <nav data-w-id="7b6858cc-3e06-ad26-979c-0d153f94f12a" className="af-class-navbar12_dropdown-list w-dropdown-list">*/}
+                      {/*      <div className="af-class-navbar12_dropdown-link-list">*/}
+                      {/*          <h4 className="af-class-text-size-small af-class-text-weight-semibold">페이지 둘러보기</h4>*/}
+                      {/*          <a href="fileupload" className="af-class-navbar12_dropdown-link w-inline-block">*/}
+                      {/*            <div className="af-class-navbar12_icon-wrapper">*/}
+                      {/*              <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">*/}
+                      {/*                  <path fill="currentColor" d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01L12.01 11L8 15.01z" />*/}
+                      {/*                </svg></div>*/}
+                      {/*            </div>*/}
+                      {/*            <div className="af-class-navbar12_text-wrapper">*/}
+                      {/*              <div className="af-class-text-weight-semibold">입력 페이지</div>*/}
+                      {/*              <p className="af-class-text-size-small af-class-hide-mobile-landscape">파일 입력 혹은 URL로 음성을 추출하세요.</p>*/}
+                      {/*            </div>*/}
+                      {/*          </a>*/}
+                      {/*          <a href="record" className="af-class-navbar12_dropdown-link w-inline-block">*/}
+                      {/*            <div className="af-class-navbar12_icon-wrapper">*/}
+                      {/*              <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">*/}
+                      {/*                  <path fill="currentColor" d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15a.998.998 0 0 0-.98-.85c-.61 0-1.09.54-1 1.14c.49 3 2.89 5.35 5.91 5.78V20c0 .55.45 1 1 1s1-.45 1-1v-2.08a6.993 6.993 0 0 0 5.91-5.78c.1-.6-.39-1.14-1-1.14z" />*/}
+                      {/*                </svg></div>*/}
+                      {/*            </div>*/}
+                      {/*            <div className="af-class-navbar12_text-wrapper">*/}
+                      {/*              <div className="af-class-text-weight-semibold">녹음 페이지</div>*/}
+                      {/*              <p className="af-class-text-size-small af-class-hide-mobile-landscape">여러분의 성대모사 실력을 뽐내세요.</p>*/}
+                      {/*            </div>*/}
+                      {/*          </a>*/}
+                      {/*          <a href="feedback" aria-current="page" className="af-class-navbar12_dropdown-link w-inline-block w--current">*/}
+                      {/*            <div className="af-class-navbar12_icon-wrapper">*/}
+                      {/*              <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">*/}
+                      {/*                  <path fill="currentColor" d="M20 19.59V8l-6-6H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c.45 0 .85-.15 1.19-.4l-4.43-4.43c-.8.52-1.74.83-2.76.83c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5c0 1.02-.31 1.96-.83 2.75L20 19.59zM9 13c0 1.66 1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3s-3 1.34-3 3z" />*/}
+                      {/*                </svg></div>*/}
+                      {/*            </div>*/}
+                      {/*            <div className="af-class-navbar12_text-wrapper">*/}
+                      {/*              <div className="af-class-text-weight-semibold">피드백 페이지</div>*/}
+                      {/*              <p className="af-class-text-size-small af-class-hide-mobile-landscape">유사도에 따른 피드백을 제공합니다.</p>*/}
+                      {/*            </div>*/}
+                      {/*          </a>*/}
+                      {/*          <a href="faqs" className="af-class-navbar12_dropdown-link w-inline-block">*/}
+                      {/*            <div className="af-class-navbar12_icon-wrapper">*/}
+                      {/*              <div className="af-class-icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="af-class-iconify af-class-iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">*/}
+                      {/*                  <path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zm-9-4h2v2h-2zm0-6h2v4h-2z" />*/}
+                      {/*                </svg></div>*/}
+                      {/*            </div>*/}
+                      {/*            <div className="af-class-navbar12_text-wrapper">*/}
+                      {/*              <div className="af-class-text-weight-semibold">자주 묻는 질문</div>*/}
+                      {/*              <p className="af-class-text-size-small af-class-hide-mobile-landscape">무엇이든 찾아보세요.</p>*/}
+                      {/*            </div>*/}
+                      {/*          </a>*/}
+                      {/*        </div>*/}
+                      {/*    </nav>*/}
+                      {/*  </div>*/}
+                      {/*  /!*<div className="af-class-navbar12_menu-buttons">*!/*/}
+                      {/*  /!*  <a href="#" className="af-class-button af-class-is-secondary af-class-is-small w-button">회원가입</a>*!/*/}
+                      {/*  /!*  <a href="#" className="af-class-button af-class-is-small w-button">로그인</a>*!/*/}
+                      {/*  /!*</div>*!/*/}
+                      {/*</nav>*/}
                     </div>
                   </div>
                   <div className="af-class-padding-global-2">
@@ -188,7 +192,7 @@ class FeedbackView extends React.Component {
                                 <div className="af-class-home4-features_image-wrapper">
                                   <div className="af-class-text-block"><strong>1순위</strong></div>
                                   {isLoading ? (
-                                    <h1 className="af-class-heading-4">Loading...</h1>
+                                    <img src={'./images/gSpin.gif'} alt="Loading..." />
                                   ) : (
                                     <h1 className="af-class-heading-4">{feedbackData ? feedbackData['1st_similarity'] + '%' : 'Loading...'}</h1>
                                   )}
@@ -208,7 +212,7 @@ class FeedbackView extends React.Component {
                                 <div className="af-class-text-block-2"><span className="af-class-text-span-2"><strong className="af-class-bold-text">2순위</strong></span></div>
                                 <div className="af-class-home4-features_image-wrapper">
                                   {isLoading ? (
-                                    <h1 className="af-class-heading-4">Loading...</h1>
+                                      <img src={'./images/gSpin.gif'} alt="Loading..." />
                                   ) : (
                                     <h1 className="af-class-heading-4">{feedbackData ? feedbackData['2nd_similarity'] + '%' : 'Loading...'}</h1>
                                   )}
@@ -228,7 +232,7 @@ class FeedbackView extends React.Component {
                                 <div className="af-class-home4-features_image-wrapper">
                                   <div className="af-class-text-block-3"><strong>3순위</strong></div>
                                   {isLoading ? (
-                                    <h1 className="af-class-heading-4">Loading...</h1>
+                                    <img src={'./images/gSpin.gif'} alt="Loading..." />
                                   ) : (
                                     <h1 className="af-class-heading-4">{feedbackData ? feedbackData['3rd_similarity'] + '%' : 'Loading'}</h1>
                                   )}
@@ -293,9 +297,9 @@ class FeedbackView extends React.Component {
                       {/*      </div>*/}
                       {/*    </div>*/}
                       {/*  </div>*/}
-                        <div>
-                          <UserGrowthChart />
-                        </div>
+                      {/*  <div>*/}
+                      {/*    <UserGrowthChart />*/}
+                      {/*  </div>*/}
                       {/*</div>*/}
                     </div>
                   </div>
@@ -308,13 +312,13 @@ class FeedbackView extends React.Component {
                           <div className="af-class-feedback-page_cta_content">
                             <div className="af-class-max-width-large">
                               <div className="af-class-margin-bottom af-class-margin-xsmall">
-                                <h3>여러분의 성장 결과를<br/>친구들과 공유하세요</h3>
+                                <h3>여러분의 결과를<br/>친구들과 공유하세요</h3>
                               </div>
                               <p className="af-class-text-size-medium-2"></p>
                             </div>
                           </div>
                           <div className="af-class-feedback-page_cta_button-row">
-                            <a href="#" className="af-class-button af-class-is-secondary w-button">공유하기</a>
+                             <ShareLinkComponent />
                             <a href="/" className="af-class-button w-button">시작화면</a>
                           </div>
                         </div>

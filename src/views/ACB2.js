@@ -46,7 +46,7 @@ function ACB2({ endpoint, audioSrc }) { // audioSrc는 오디오 파일의 소�
       {showComment && (
         <div className="additional-comment">
           {isLoading ? (
-            <p>Loading...</p>
+            <img src={'./images/sSpin.gif'} alt="Loading..." />
           ) : error ? (
             <p className="error">{error}</p>
           ) : (

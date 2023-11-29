@@ -44,7 +44,7 @@ function AdditionalCommentButton({ endpoint, audioSrc }) { // audioSrc는 오디
       {showComment && (
         <div className="additional-comment">
           {isLoading ? (
-            <p>Loading...</p>
+            <img src={'./images/sSpin.gif'} alt="Loading..." />
           ) : error ? (
             <p className="error">{error}</p>
           ) : (

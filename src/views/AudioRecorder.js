@@ -16,7 +16,7 @@ const AudioRecorder = () => {
 
   useEffect(() => {
     if (isRecording) {
-      // Initialize canvas and audio context only when recording
+
       const canvas = canvasRef.current;
       const canvasContext = canvas.getContext('2d');
       canvasContext.clearRect(0, 0, canvas.width, canvas.height);
@@ -27,7 +27,8 @@ const AudioRecorder = () => {
     };
   }, [isRecording]);
 
-    const draw = () => {
+  const draw = () => {
+    if (!canvasRef.current) return; // 캔버스 ref 확인
     const canvas = canvasRef.current;
     const canvasContext = canvas.getContext('2d');
     const analyser = analyserRef.current;

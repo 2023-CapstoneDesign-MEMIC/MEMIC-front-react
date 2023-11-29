@@ -6,6 +6,7 @@ function ACB3({ endpoint, audioSrc }) { // audioSrc는 오디오 파일의 소�
   const [showComment, setShowComment] = useState(false);
   const [commentData, setCommentData] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  // eslint-disable-next-line
   const [error, setError] = useState(null);
 
   const fetchComment = () => {
@@ -44,9 +45,7 @@ function ACB3({ endpoint, audioSrc }) { // audioSrc는 오디오 파일의 소�
       {showComment && (
         <div className="additional-comment">
           {isLoading ? (
-            <p>Loading...</p>
-          ) : error ? (
-            <p className="error">{error}</p>
+            <img src={'./images/sSpin.gif'} alt="Loading..." />
           ) : (
             // 피드백 내용 표시
             <p>{commentData}</p>

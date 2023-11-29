@@ -121,7 +121,8 @@ const AnalyseComponent = () => {
 
   // 데이터 로딩 중 표시
   if (!data) {
-    return <div>Loading...</div>;
+    // return <div>Loading...</div>;
+    return <img src={'./images/Spin.gif'} alt="Loading..." />; // 로딩 GIF 표시
   }
   return <FeedbackReport data={data} />;
 };

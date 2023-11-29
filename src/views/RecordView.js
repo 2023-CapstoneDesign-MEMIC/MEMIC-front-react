@@ -91,7 +91,6 @@ class RecordView extends React.Component {
                       </address>
                     </div>
                     <nav role="navigation" className="af-class-navbar12_menu af-class-is-page-height-tablet w-nav-menu">
-                      <a href="#Gallary" className="af-class-navbar12_link w-nav-link">갤러리</a>
                       <a href="#Report" className="af-class-navbar12_link w-nav-link">결과보기</a>
                       <div data-hover="true" data-delay={200} data-w-id="cdb04180-031c-bd6d-bf2c-3d77774365fc" className="af-class-navbar12_menu-dropdown w-dropdown">
                         <div className="af-class-navbar12_dropdown-toggle w-dropdown-toggle">
@@ -150,10 +149,10 @@ class RecordView extends React.Component {
                             </div>
                         </nav>
                       </div>
-                      <div className="af-class-navbar12_menu-buttons">
-                        <a href="#" className="af-class-button af-class-is-secondary af-class-is-small w-button">회원가입</a>
-                        <a href="#" className="af-class-button af-class-is-small w-button">로그인</a>
-                      </div>
+                      {/*<div className="af-class-navbar12_menu-buttons">*/}
+                      {/*  <a href="#" className="af-class-button af-class-is-secondary af-class-is-small w-button">회원가입</a>*/}
+                      {/*  <a href="#" className="af-class-button af-class-is-small w-button">로그인</a>*/}
+                      {/*</div>*/}
                     </nav>
                   </div>
                 </div>
@@ -176,24 +175,24 @@ class RecordView extends React.Component {
                     </div>
                   </div>
                 </section>
-                <section className="af-class-section_record-your-voice_cta">
-                  <header className="af-class-section_header62">
-                    <section />
-                    <div id="Gallary" className="af-class-padding-global-2">
-                      <div className="af-class-container-small">
-                        <div className="af-class-padding-section-large-3">
-                          <div className="af-class-text-align-center">
-                            <div className="af-class-margin-bottom af-class-margin-small">
-                              <h1>음성 갤러리</h1>
-                            </div>
-                            <p className="af-class-text-size-medium">당신의 성대모사를 다시 들어보세요.</p>
-                            <AudioSubmitComponent />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </header>
-                </section>
+                {/*<section className="af-class-section_record-your-voice_cta">*/}
+                {/*  <header className="af-class-section_header62">*/}
+                {/*    <section />*/}
+                {/*    <div id="Gallary" className="af-class-padding-global-2">*/}
+                {/*      <div className="af-class-container-small">*/}
+                {/*        <div className="af-class-padding-section-large-3">*/}
+                {/*          <div className="af-class-text-align-center">*/}
+                {/*            <div className="af-class-margin-bottom af-class-margin-small">*/}
+                {/*              <h1>음성 갤러리</h1>*/}
+                {/*            </div>*/}
+                {/*            <p className="af-class-text-size-medium">당신의 성대모사를 다시 들어보세요.</p>*/}
+                {/*            <AudioSubmitComponent />*/}
+                {/*          </div>*/}
+                {/*        </div>*/}
+                {/*      </div>*/}
+                {/*    </div>*/}
+                {/*  </header>*/}
+                {/*</section>*/}
                 <section className="af-class-section_record-your-voice_cta">
                   <header className="af-class-section_header62">
                     <section />
