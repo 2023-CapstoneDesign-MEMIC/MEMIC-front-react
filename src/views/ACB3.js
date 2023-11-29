@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './AdditionalCommentButton.css';
 import AudioPlayer from './AudioPlayer';
 
-function AdditionalCommentButton({ endpoint, audioSrc }) { // audioSrc는 오디오 파일의 소스 URL
+function ACB3({ endpoint, audioSrc }) { // audioSrc는 오디오 파일의 소스 URL
   const [showComment, setShowComment] = useState(false);
   const [commentData, setCommentData] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +20,7 @@ function AdditionalCommentButton({ endpoint, audioSrc }) { // audioSrc는 오디
         return response.json();
       })
       .then(data => {
-        setCommentData(data['1st_sentence']);
+        setCommentData(data['3rd_sentence']);
         setIsLoading(false);
       })
       .catch(err => {
@@ -58,4 +58,4 @@ function AdditionalCommentButton({ endpoint, audioSrc }) { // audioSrc는 오디
     </div>
   );
 }
-export default AdditionalCommentButton;
+export default ACB3;

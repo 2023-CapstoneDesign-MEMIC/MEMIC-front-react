@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './AnalyseComponent.css'; // 스타일 시트를 가져옵니다.
+import React, { useState, useEffect } from 'react';
+import './AnalyseComponent.css';
 import ScoreChart from './ScoreChart';
 
 const FeedbackReport = ({ data }) => {
@@ -43,7 +43,7 @@ const FeedbackReport = ({ data }) => {
 
   return (
     <div className="report-container">
-      <h3 className="title">총평</h3>
+      <h3 className="title">전체 유사도</h3>
       <p className="score">{data.score}%</p>
       {scoreChart}
       {/* 점수에 따른 멘트 표시 */}
@@ -78,17 +78,52 @@ const FeedbackReport = ({ data }) => {
 
 const AnalyseComponent = () => {
   // 랜덤 스코어 생성
-  const randomScore = Math.floor(Math.random() * 100);
+  // const randomScore = Math.floor(Math.random() * 100);
+  // const dummyData = {
+  //   score: randomScore, // 랜덤 스코어 사용
+  //   audioLinks: {
+  //     reference: 'audio/reference_voice.wav',
+  //     user: 'audio/user_voice.wav'
+  //   }
+  // };
+  const [data, setData] = useState(null);
 
-  const dummyData = {
-    score: randomScore, // 랜덤 스코어 사용
-    audioLinks: {
-      reference: 'audio/reference_voice.wav',
-      user: 'audio/user_voice.wav'
-    }
-  };
+  useEffect(() => {
+    // 데이터 가져오기
+    fetch('http://127.0.0.1:8000/analyse/',{
+    method: 'GET', // 또는 'POST'
+    mode: 'cors', // CORS 모드 사용
+    headers: {
+      'Content-Type': 'application/json',
+      // 필요한 경우 추가 헤더를 여기에 추가
+    },
+  }) // 장고 백엔드 URL
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        // JSON 데이터 중 similarity 값을 사용하여 data 상태 업데이트
+        setData({
+          score: data['similarity'],
+          audioLinks: {
+            reference: '/images/userVocal.wav', // 필요에 따라 조정
+            user: '/images/sourceVocal.wav' // 필요에 따라 조정
+          }
+        });
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+  }, []);
 
-  return <FeedbackReport data={dummyData} />;
+  // 데이터 로딩 중 표시
+  if (!data) {
+    return <div>Loading...</div>;
+  }
+  return <FeedbackReport data={data} />;
 };
 
 export default AnalyseComponent;

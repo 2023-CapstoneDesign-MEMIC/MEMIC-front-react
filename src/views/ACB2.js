@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import './AdditionalCommentButton.css';
 import AudioPlayer from './AudioPlayer';
 
-function AdditionalCommentButton({ endpoint, audioSrc }) { // audioSrc는 오디오 파일의 소스 URL
+function ACB2({ endpoint, audioSrc }) { // audioSrc는 오디오 파일의 소스 URL
   const [showComment, setShowComment] = useState(false);
   const [commentData, setCommentData] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  // const [audioStartTime, setAudioStartTime] = useState(0); // 오디오 시작 시간 상태
 
   const fetchComment = () => {
     setError(null); // 에러 상태 초기화
@@ -20,7 +21,8 @@ function AdditionalCommentButton({ endpoint, audioSrc }) { // audioSrc는 오디
         return response.json();
       })
       .then(data => {
-        setCommentData(data['1st_sentence']);
+        setCommentData(data['2nd_sentence']);
+        // setAudioStartTime(data['2nd_time']); // 오디오 시작 시간 설정
         setIsLoading(false);
       })
       .catch(err => {
@@ -52,10 +54,11 @@ function AdditionalCommentButton({ endpoint, audioSrc }) { // audioSrc는 오디
             <p>{commentData}</p>
 
           )}
-          <AudioPlayer src={audioSrc = './images/userVocal.wav'} />
+          <AudioPlayer src={audioSrc = './images/sourceVocal.wav'} />
+          {/*<AudioPlayer src={audioSrc = './images/sourceVocal.wav'} initialStartTime={audioStartTime}/>*/}
         </div>
       )}
     </div>
   );
 }
-export default AdditionalCommentButton;
+export default ACB2;

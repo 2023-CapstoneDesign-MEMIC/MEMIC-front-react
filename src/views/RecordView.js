@@ -163,7 +163,7 @@ class RecordView extends React.Component {
                       <div className="af-class-padding-section-large-3">
                         <div className="af-class-text-align-center">
                           <div className="af-class-margin-bottom af-class-margin-small">
-                            <h2 className="af-class-heading-2">성대모사 시작하기</h2>
+                            <h1 className="af-class-heading-2">성대모사 시작하기</h1>
                           </div>
                           <p className="af-class-text-size-medium"><span className="af-class-text-span">당신의 성대모사 실력을 뽐내보세요.</span></p>
                           <div className="af-class-margin-top af-class-margin-medium">

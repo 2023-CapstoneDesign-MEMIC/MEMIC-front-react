@@ -4,7 +4,10 @@ import React from 'react'
 import { createScope, map, transformProxies } from './helpers'
 import AnalyseComponent from './AnalyseComponent';
 import AdditionalCommentButton from './AdditionalCommentButton';
+import ACB2 from './ACB2'
+import ACB3 from './ACB3'
 import UserGrowthChart from './UserGrowthChart'
+
 const scripts = [
   { loading: fetch("https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6526603ca6ecfaa934a69294").then(body => body.text()), isAsync: false },
   { loading: fetch("js/webflow.js").then(body => body.text()), isAsync: false },
@@ -15,58 +18,40 @@ let Controller
 class FeedbackView extends React.Component {
   static get Controller() {
     if (Controller) return Controller
-
-    // try {
-    //   Controller = require('../controllers/FeedbackController')
-    //   Controller = Controller.default || Controller
-    //
-    //   return Controller
-    // }
-    // catch (e) {
-    //   if (e.code == 'MODULE_NOT_FOUND') {
-    //     Controller = FeedbackView
-    //
-    //     return Controller
-    //   }
-    //
-    //   throw e
-    // }
-  }
-
-  componentDidMount() {
-    const htmlEl = document.querySelector('html')
-    htmlEl.dataset['wfPage'] = '65280501ffdeaf83a53f92e2'
-    htmlEl.dataset['wfSite'] = '6526603ca6ecfaa934a69294'
-
-    scripts.concat(null).reduce((active, next) => Promise.resolve(active).then((active) => {
-      const loading = active.loading.then((script) => {
-        new Function(`
-          with (this) {
-            eval(arguments[0])
-          }
-        `).call(window, script)
-
-        return next
-      })
-
-      return active.isAsync ? next : loading
-    }))
   }
   constructor(props) {
     super(props);
     this.state = {
-      showAdditionalComment: false // 여기서 추가 상태를 선언합니다.
+      feedbackData: null,
+      isLoading: true,
     };
   }
-    // 추가 코멘트를 토글하는 메서드입니다.
+  componentDidMount() {
+    fetch('/analyse/')  // 장고 백엔드 URL
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        this.setState({ feedbackData: data, isLoading: false });
+
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+        this.setState({ isLoading: false });
+      });
+  }
+
   toggleAdditionalComment = () => {
     this.setState(prevState => ({
       showAdditionalComment: !prevState.showAdditionalComment
     }));
   }
   render() {
+    const { isLoading, feedbackData } = this.state;
     const proxies = FeedbackView.Controller !== FeedbackView ? transformProxies(this.props.children) : {
-
     }
 
     return (
@@ -77,8 +62,6 @@ class FeedbackView extends React.Component {
           @import url(/css/me-mic-demo-site.webflow.css);
 
           @media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id=\"7b6858cc-3e06-ad26-979c-0d153f94f12a\"] {-webkit-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 3rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0;}}@media (max-width:991px) and (min-width:768px) {html.w-mod-js:not(.w-mod-ix) [data-w-id=\"7b6858cc-3e06-ad26-979c-0d153f94f12a\"] {height:0px;}}@media (max-width:767px) and (min-width:480px) {html.w-mod-js:not(.w-mod-ix) [data-w-id=\"7b6858cc-3e06-ad26-979c-0d153f94f12a\"] {height:0px;}}@media (max-width:479px) {html.w-mod-js:not(.w-mod-ix) [data-w-id=\"7b6858cc-3e06-ad26-979c-0d153f94f12a\"] {height:0px;}}
-
-
             * {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -92,8 +75,7 @@ class FeedbackView extends React.Component {
                 <header className="af-class-section_feedback-page_header">
                   <div data-animation="default" className="af-class-navbar12_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="7b6858cc-3e06-ad26-979c-0d153f94f116" role="banner" data-duration={400} id="nav_bar" style={{ borderBottom: '2px solid #000' }}>
                     <div className="af-class-navbar12_container">
-                      <a href="/" className="af-class-navbar12_logo-link w-nav-brand"><img src="images/logo.png" loading="lazy" width={42} alt="logo for navbar
-        " className="af-class-navbar12_logo" /></a>
+                      <a href="/" className="af-class-navbar12_logo-link w-nav-brand"><img src="images/logo.png" loading="lazy" width={42} alt="logo for navbar" className="af-class-navbar12_logo" /></a>
                       <div className="af-class-navbar12_menu-button w-nav-button">
                         <address className="af-class-menu-icon1">
                           <div className="af-class-menu-icon1_line-top" />
@@ -177,7 +159,7 @@ class FeedbackView extends React.Component {
                             <a href="#repo"><h1>성대모사 평가</h1></a>
                           </div>
                           <div id='repo'>
-                            < AnalyseComponent/>
+                            <AnalyseComponent />
                           </div>
                           <div className="af-class-margin-top af-class-margin-medium">
                             <div className="af-class-button-group af-class-is-center">
@@ -197,7 +179,7 @@ class FeedbackView extends React.Component {
                         <div className="af-class-layout250_component">
                           <div className="af-class-margin-bottom af-class-margin-xxlarge">
                             <div className="af-class-max-width-large">
-                              <h2 className="af-class-heading-3">피드백 보기</h2>
+                              <h2 className="af-class-heading-3">피드백 보고서</h2>
                             </div>
                           </div>
                           <div className="w-layout-grid af-class-layout250_list">
@@ -205,45 +187,60 @@ class FeedbackView extends React.Component {
                               <div className="af-class-margin-bottom af-class-margin-medium">
                                 <div className="af-class-home4-features_image-wrapper">
                                   <div className="af-class-text-block"><strong>1순위</strong></div>
-                                  <h1 className="af-class-heading-4">85%</h1>
+                                  {isLoading ? (
+                                    <h1 className="af-class-heading-4">Loading...</h1>
+                                  ) : (
+                                    <h1 className="af-class-heading-4">{feedbackData ? feedbackData['1st_similarity'] + '%' : 'Loading...'}</h1>
+                                  )}
                                 </div>
                               </div>
-                              <div className="af-class-margin-bottom af-class-margin-xsmall">
-                                <h3 className="af-class-heading-style-h5"><strong>Accuracy and Similarity</strong></h3>
-                              </div>
-                              <p>ㅋ,ㅌ,ㅍ,ㅆ 와 같은 격한 소리의 자음에 더 힘을 실어주세요!</p>
+                              {isLoading ? (
+                                  <p>Loading...</p>
+                                  ) : (
+                                    <p className="af-class-heading-style-h5">{feedbackData ? `시간: ${feedbackData['1st_time']}초 에서 점수가 위와 같아요.` : 'Loading...'}</p>
+                              )}
                               <div className="af-class-margin-top af-class-margin-medium">
-                                <AdditionalCommentButton endpoint="/api/comments/123" />
+                                <AdditionalCommentButton endpoint="/analyse/" />
                               </div>
                             </div>
                             <div className="af-class-layout250_item">
                               <div className="af-class-margin-bottom af-class-margin-medium">
                                 <div className="af-class-text-block-2"><span className="af-class-text-span-2"><strong className="af-class-bold-text">2순위</strong></span></div>
                                 <div className="af-class-home4-features_image-wrapper">
-                                  <h1 className="af-class-heading-5">52%</h1>
+                                  {isLoading ? (
+                                    <h1 className="af-class-heading-4">Loading...</h1>
+                                  ) : (
+                                    <h1 className="af-class-heading-4">{feedbackData ? feedbackData['2nd_similarity'] + '%' : 'Loading...'}</h1>
+                                  )}
                                 </div>
                               </div>
-                              <div className="af-class-margin-bottom af-class-margin-xsmall">
-                                <h3 className="af-class-heading-style-h5"><strong>Fluency and Rhythm</strong></h3>
-                              </div>
-                              <p>ㅏ,ㅔ,ㅣ,ㅗ,ㅜ와 같은 모음 발음이 부정확해요!</p>
+                              {isLoading ? (
+                                  <p>Loading...</p>
+                                  ) : (
+                                    <p className="af-class-heading-style-h5">{feedbackData ? `시간: ${feedbackData['2nd_time']}초 에서 점수가 위와 같아요.` : 'Loading...'}</p>
+                              )}
                               <div className="af-class-margin-top af-class-margin-medium">
-                                <AdditionalCommentButton endpoint="/api/comments/123" />
+                                <ACB2 endpoint="/analyse/" />
                               </div>
                             </div>
                             <div className="af-class-layout250_item">
                               <div className="af-class-margin-bottom af-class-margin-medium">
                                 <div className="af-class-home4-features_image-wrapper">
                                   <div className="af-class-text-block-3"><strong>3순위</strong></div>
-                                  <h1 className="af-class-heading-6">38%</h1>
+                                  {isLoading ? (
+                                    <h1 className="af-class-heading-4">Loading...</h1>
+                                  ) : (
+                                    <h1 className="af-class-heading-4">{feedbackData ? feedbackData['3rd_similarity'] + '%' : 'Loading'}</h1>
+                                  )}
                                 </div>
                               </div>
-                              <div className="af-class-margin-bottom af-class-margin-xsmall">
-                                <h3 className="af-class-heading-style-h5"><strong>Pronunciation and Articulation</strong></h3>
-                              </div>
-                              <p>발화 속도가 느려요! 조금 더 템포를 올려주세요.</p>
+                              {isLoading ? (
+                                  <p>Loading...</p>
+                                  ) : (
+                                    <p className="af-class-heading-style-h5">{feedbackData ? `시간: ${feedbackData['2nd_time']}초 에서 점수가 위와 같아요.` : 'Loading...'}</p>
+                              )}
                               <div className="af-class-margin-top af-class-margin-medium">
-                                <AdditionalCommentButton endpoint="/api/comments/123" />
+                                <ACB3 endpoint="/analyse/" />
                               </div>
                             </div>
                           </div>
