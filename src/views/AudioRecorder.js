@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useParams,  useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './AudioRecorder.css';
 
 const AudioRecorder = () => {
+  let { uuid } = useParams();
   const [isRecording, setIsRecording] = useState(false);
   const [audioURL, setAudioURL] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -13,6 +15,7 @@ const AudioRecorder = () => {
   const analyserRef = useRef(null);
   const animationRef = useRef(null);
   const canvasRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (isRecording) {
@@ -117,6 +120,7 @@ const AudioRecorder = () => {
       const audioBlob = await fetch(audioURL).then(r => r.blob());
       const formData = new FormData();
       formData.append('audio_file', audioBlob, 'recording.wav');
+      formData.append('uuid', uuid)
 
       const response = await axios.post('http://127.0.0.1:8000/record/', formData, {
         headers: {
@@ -124,10 +128,16 @@ const AudioRecorder = () => {
         }
       });
 
+      const responseData = response.data;
+      const uuid = responseData.uuid;
+
       if (response.status === 201) {
         console.log('Submitted the recording:', response.data);
         setIsSubmitted(true);
       }
+
+      alert('동영상 처리 요청을 보냈습니다.');
+      navigate(`/feedback/${uuid}`);
     } catch (error) {
       console.error('There was an error submitting the recording:', error);
     }

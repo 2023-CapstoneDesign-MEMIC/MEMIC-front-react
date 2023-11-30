@@ -1,6 +1,7 @@
 /* eslint-disable */
 
 import React from 'react'
+import { useParams } from "react-router-dom";
 import { createScope, map, transformProxies } from './helpers'
 import AnalyseComponent from './AnalyseComponent';
 import AdditionalCommentButton from './AdditionalCommentButton';
@@ -15,11 +16,14 @@ const scripts = [
 ]
 
 let Controller
+let { uuid } = useParams();
 
 class FeedbackView extends React.Component {
+
   static get Controller() {
     if (Controller) return Controller
   }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -28,7 +32,7 @@ class FeedbackView extends React.Component {
     };
   }
   componentDidMount() {
-    fetch('/analyse/')  // 장고 백엔드 URL
+    fetch('/analyse/', {method: "POST", body: JSON.stringify({uuid: uuid})})  // 장고 백엔드 URL
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

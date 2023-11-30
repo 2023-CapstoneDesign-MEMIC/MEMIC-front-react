@@ -1,23 +1,25 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './AudioInputComponent.css'
+import './YouTubeComponent.css';
+import { useNavigate } from 'react-router-dom';
 
-const AudioInputComponent = () => {
-  const [file, setFile] = useState(null);
-  const [audioUrl, setAudioUrl] = useState(null); // 오디오 URL 상태
-  const [start, setStart] = useState(''); // 시작 시간 상태
-  const [end, setEnd] = useState(''); // 종료 시간 상태
-  const [submitted, setSubmitted] = useState(false);
+//----csrf error solve----//
+axios.defaults.xsrfCookieName = 'csrftoken';
+axios.defaults.xsrfHeaderName = 'X-CSRFTOKEN';
 
-  const handleFileChange = (event) => {
-    const selectedFile = event.target.files[0];
-    setFile(selectedFile);
-    if (selectedFile) {
-      const url = URL.createObjectURL(selectedFile);
-      setAudioUrl(url);
-    } else {
-      setAudioUrl(null); // 파일이 선택되지 않았을 때 audioUrl 상태를 null로 설정
-    }
+const YouTubeComponent = () => {
+  const [link, setLink] = useState('');
+  const [videoId, setVideoId] = useState('');
+  const [start, setStart] = useState('');
+  const [end, setEnd] = useState('');
+  const navigate = useNavigate();
+  const handleLinkChange = (event) => {
+    const url = event.target.value;
+    setLink(url);
+
+    // URL이 변경되면 videoId 상태를 업데이트합니다.
+    const videoIdMatch = url.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\s]{11})/i);
+    setVideoId(videoIdMatch ? videoIdMatch[1] : '');
   };
 
   const handleStartChange = (event) => {
@@ -29,20 +31,20 @@ const AudioInputComponent = () => {
   };
 
   const handleSubmit = async () => {
-    if (file && start && end) {
+    if (link && start && end) {
       const formData = new FormData();
-      formData.append('audiofile', file);
+      formData.append('link', link);
       formData.append('start', start);
       formData.append('end', end);
 
       try {
-        const response = await axios.post('http://127.0.0.1:8000/fileupload/', formData, {
+        await axios.post('http://127.0.0.1:8000/fileupload/youtube', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }
         });
-        console.log(response.data); // 백엔드 응답 로깅
-        setSubmitted(true);
+        alert('동영상 처리 요청을 보냈습니다.');
+        navigate('/record');
       } catch (error) {
         console.error('There was an error!', error);
       }
@@ -52,47 +54,49 @@ const AudioInputComponent = () => {
   };
 
   return (
-    <div className="AudioInputComponent-container">
-      {/* 제출 후 메시지 또는 입력 필드 표시 */}
-      {submitted ? (
-        <div className="AudioInputComponent-successMessage">Your submission has been successfully processed!</div>
-      ) : (
-        <>
-          {audioUrl && (
+      <div className="container">
+        <h4>유튜브에서 음성 추출하기</h4>
+        <input
+            className="input-field"
+            type="text"
+            value={link}
+            onChange={handleLinkChange}
+            placeholder="YouTube 링크를 입력하세요."
+        />
+        {/* YouTube 영상 미리보기 */}
+        {videoId && (
             <>
-              <audio controls src={audioUrl} className="AudioInputComponent-audioPlayer">
-                Your browser does not support the audio element.
-              </audio>
-              <div className="AudioInputComponent-time-inputs">
+              <iframe title="YouTube video player"
+                      width="560"
+                      height="315"
+                      src={`https://www.youtube.com/embed/${videoId}`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen className="youtube-iframe"
+              ></iframe>
+              <div className="af-class-text-size-tiny af-class-text-color-black">최대한 정확한 시간을 입력해주세요!</div>
+              {/* 시작 시간과 종료 시간 입력 필드 */}
+              <div className="time-inputs full-width">
                 <input
-                  type="text"
-                  value={start}
-                  onChange={handleStartChange}
-                  placeholder="시작 시간 (초)"
-                  className="AudioInputComponent-input"
+                    className="input-field time-field"
+                    type="text"
+                    value={start}
+                    onChange={handleStartChange}
+                    placeholder="시작 시간 (초)"
                 />
                 <input
-                  type="text"
-                  value={end}
-                  onChange={handleEndChange}
-                  placeholder="종료 시간 (초)"
-                  className="AudioInputComponent-input"
+                    className="input-field time-field"
+                    type="text"
+                    value={end}
+                    onChange={handleEndChange}
+                    placeholder="종료 시간 (초)"
                 />
               </div>
             </>
-          )}
-          <input
-            type="file"
-            accept=".mp3,.wav,.flac,.aac"
-            onChange={handleFileChange}
-            className="AudioInputComponent-input"
-          />
-          <div className="af-class-text-size-tiny">[file format] .mp3,.wav,.flac,.aac</div>
-          <button onClick={handleSubmit} className="af-class-button af-class-is-secondary af-class-is-small w-button">업로드하기</button>
-        </>
-      )}
-    </div>
+        )}
+        <button className="af-class-button af-class-is-small w-button" onClick={handleSubmit}>추출하기</button>
+      </div>
   );
 };
 
-export default AudioInputComponent;
+export default YouTubeComponent;

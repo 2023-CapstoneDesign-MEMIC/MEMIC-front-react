@@ -17,9 +17,9 @@ ReactDOM.render(
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<IndexView />} />
-            <Route path="/fileupload" element={<InputView />} />
-            <Route path="/record" element={<RecordView />} />
-            <Route path="/feedback" element={<FeedbackView />} />
+            <Route path="/fileupload/" element={<InputView />} />
+            <Route path="/record/:uuid" element={<RecordView />} />
+            <Route path="/feedback/:uuid" element={<FeedbackView />} />
             <Route path="/faqs" element={<FaqsView />} />
             <Route path="/401" element={<UnauthorizedView />} />
             <Route path="/404" element={<NotFoundView />} />
