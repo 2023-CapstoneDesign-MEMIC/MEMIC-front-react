@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './AudioPlayer.css';
-const AudioPlayer = ({ src }) => {
+const AudioPlayer = ({ src , start }) => {
   const [isSectionRepeatOn, setIsSectionRepeatOn] = useState(false);
-  const [startTime, setStartTime] = useState(0);
+  const [startTime, setStartTime] = useState(start);
   const [endTime, setEndTime] = useState(0);
   const audioRef = useRef(null);
 
@@ -19,6 +19,10 @@ const AudioPlayer = ({ src }) => {
       audio.removeEventListener('loadedmetadata', setAudioMetadata);
     };
   }, []);
+
+  useEffect(() => {
+    setStartTime(start); // start prop이 변경될 때 startTime 상태 업데이트
+  }, [start]);
 
   useEffect(() => {
     const audio = audioRef.current;

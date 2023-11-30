@@ -4,7 +4,9 @@ import AudioPlayer from './AudioPlayer';
 
 function AdditionalCommentButton({ endpoint, audioSrc }) { // audioSrc는 오디오 파일의 소스 URL
   const [showComment, setShowComment] = useState(false);
-  const [commentData, setCommentData] = useState('');
+  const [startAudio, setStartAudio] = useState(0);
+  const [commentDataM, setCommentDataM] = useState('');
+  const [commentDataD, setCommentDataD] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -20,7 +22,9 @@ function AdditionalCommentButton({ endpoint, audioSrc }) { // audioSrc는 오디
         return response.json();
       })
       .then(data => {
-        setCommentData(data['1st_sentence']);
+        setCommentDataM(data['1st_sentence_M']);
+        setCommentDataD(data['1st_sentence_D']);
+        setStartAudio(data['1st_time']);
         setIsLoading(false);
       })
       .catch(err => {
@@ -31,7 +35,7 @@ function AdditionalCommentButton({ endpoint, audioSrc }) { // audioSrc는 오디
 
   const handleToggleComment = () => {
     setShowComment(!showComment);
-    if (!showComment && !commentData) {
+    if (!showComment && !commentDataM && !commentDataD) {
       fetchComment();
     }
   };
@@ -49,10 +53,14 @@ function AdditionalCommentButton({ endpoint, audioSrc }) { // audioSrc는 오디
             <p className="error">{error}</p>
           ) : (
             // 피드백 내용 표시
-            <p>{commentData}</p>
-
+              <div>
+                <p className="af-class-heading-style-h6" style={{ fontWeight : 'bold'}}>{commentDataM}</p>
+                <br></br>
+                <p style={{ whiteSpace: 'pre-wrap' }}>{commentDataD}</p>
+              </div>
           )}
-          <AudioPlayer src={audioSrc = './images/userVocal.wav'} />
+          <AudioPlayer src={audioSrc = './images/sourceVocal.wav'} start = {startAudio} />
+          <AudioPlayer src={audioSrc = './images/userVocal.wav'} start = {startAudio} />
         </div>
       )}
     </div>

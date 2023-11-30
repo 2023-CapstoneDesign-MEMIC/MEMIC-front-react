@@ -109,8 +109,8 @@ const AnalyseComponent = () => {
         setData({
           score: data['similarity'],
           audioLinks: {
-            reference: '/images/userVocal.wav', // 필요에 따라 조정
-            user: '/images/sourceVocal.wav' // 필요에 따라 조정
+            reference: '/images/sourceVocal.wav', // 필요에 따라 조정
+            user: '/images/userVocal.wav' // 필요에 따라 조정
           }
         });
       })
