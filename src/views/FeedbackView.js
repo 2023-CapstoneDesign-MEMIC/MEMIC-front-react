@@ -201,8 +201,11 @@ class FeedbackView extends React.Component {
                               {isLoading ? (
                                   <p>Loading...</p>
                                   ) : (
-                                    <p className="af-class-heading-style-h5">{feedbackData ? `시간: ${feedbackData['1st_time']}초 에서 점수가 위와 같아요.` : 'Loading...'}</p>
-                              )}
+                                      <div>
+                                        <p className="af-class-heading-style-h5">{feedbackData ? `따라하려는 음성: ${feedbackData['1st_time_source']}초,` : 'Loading...'}</p>
+                                        <p className="af-class-heading-style-h5">{feedbackData ? `사용자님의 음성: ${feedbackData['1st_time_user']}초 에서 점수가 위와 같아요.` : 'Loading...'}</p>
+                                      </div>
+                                        )}
                               <div className="af-class-margin-top af-class-margin-medium">
                                 <AdditionalCommentButton endpoint="/analyse/" />
                               </div>
@@ -221,8 +224,10 @@ class FeedbackView extends React.Component {
                               {isLoading ? (
                                   <p>Loading...</p>
                                   ) : (
-                                    <p className="af-class-heading-style-h5">{feedbackData ? `시간: ${feedbackData['2nd_time']}초 에서 점수가 위와 같아요.` : 'Loading...'}</p>
-                              )}
+                                  <div>
+                                    <p className="af-class-heading-style-h5">{feedbackData ? `따라하려는 음성: ${feedbackData['2nd_time_source']}초,` : 'Loading...'}</p>
+                                    <p className="af-class-heading-style-h5">{feedbackData ? `사용자님의 음성: ${feedbackData['2nd_time_user']}초 에서 점수가 위와 같아요.` : 'Loading...'}</p>
+                                  </div>                              )}
                               <div className="af-class-margin-top af-class-margin-medium">
                                 <ACB2 endpoint="/analyse/" />
                               </div>
@@ -241,8 +246,10 @@ class FeedbackView extends React.Component {
                               {isLoading ? (
                                   <p>Loading...</p>
                                   ) : (
-                                    <p className="af-class-heading-style-h5">{feedbackData ? `시간: ${feedbackData['2nd_time']}초 에서 점수가 위와 같아요.` : 'Loading...'}</p>
-                              )}
+                                  <div>
+                                    <p className="af-class-heading-style-h5">{feedbackData ? `따라하려는 음성: ${feedbackData['3rd_time_source']}초,` : 'Loading...'}</p>
+                                    <p className="af-class-heading-style-h5">{feedbackData ? `사용자님의 음성: ${feedbackData['3rd_time_user']}초 에서 점수가 위와 같아요.` : 'Loading...'}</p>
+                                  </div>                              )}
                               <div className="af-class-margin-top af-class-margin-medium">
                                 <ACB3 endpoint="/analyse/" />
                               </div>

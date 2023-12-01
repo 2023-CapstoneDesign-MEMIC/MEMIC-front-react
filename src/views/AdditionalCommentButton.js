@@ -4,7 +4,8 @@ import AudioPlayer from './AudioPlayer';
 
 function AdditionalCommentButton({ endpoint, audioSrc }) { // audioSrc는 오디오 파일의 소스 URL
   const [showComment, setShowComment] = useState(false);
-  const [startAudio, setStartAudio] = useState(0);
+  const [startAudioS, setStartAudioS] = useState(0);
+  const [startAudioU, setStartAudioU] = useState(0);
   const [commentDataM, setCommentDataM] = useState('');
   const [commentDataD, setCommentDataD] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -24,7 +25,8 @@ function AdditionalCommentButton({ endpoint, audioSrc }) { // audioSrc는 오디
       .then(data => {
         setCommentDataM(data['1st_sentence_M']);
         setCommentDataD(data['1st_sentence_D']);
-        setStartAudio(data['1st_time']);
+        setStartAudioS(data['1st_time_source']);
+        setStartAudioU(data['1st_time_user']);
         setIsLoading(false);
       })
       .catch(err => {
@@ -59,8 +61,8 @@ function AdditionalCommentButton({ endpoint, audioSrc }) { // audioSrc는 오디
                 <p style={{ whiteSpace: 'pre-wrap' }}>{commentDataD}</p>
               </div>
           )}
-          <AudioPlayer src={audioSrc = './images/sourceVocal.wav'} start = {startAudio} />
-          <AudioPlayer src={audioSrc = './images/userVocal.wav'} start = {startAudio} />
+          <AudioPlayer src={audioSrc = './images/sourceVocal.wav'} start = {startAudioS} />
+          <AudioPlayer src={audioSrc = './images/userVocal.wav'} start = {startAudioU} />
         </div>
       )}
     </div>

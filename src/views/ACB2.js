@@ -4,7 +4,8 @@ import AudioPlayer from './AudioPlayer';
 
 function ACB2({ endpoint, audioSrc }) { // audioSrc는 오디오 파일의 소스 URL
   const [showComment, setShowComment] = useState(false);
-  const [startAudio, setStartAudio] = useState(0);
+  const [startAudioS, setStartAudioS] = useState(0);
+  const [startAudioU, setStartAudioU] = useState(0);
   const [commentDataM, setCommentDataM] = useState('');
   const [commentDataD, setCommentDataD] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -25,7 +26,8 @@ function ACB2({ endpoint, audioSrc }) { // audioSrc는 오디오 파일의 소�
       .then(data => {
         setCommentDataM(data['2nd_sentence_M']);
         setCommentDataD(data['2nd_sentence_D']);
-        setStartAudio(data['2nd_time']); // 오디오 시작 시간 설정
+        setStartAudioS(data['2nd_time_source']); // 오디오 시작 시간 설정
+        setStartAudioU(data['2nd_time_user']); // 오디오 시작 시간 설정
         setIsLoading(false);
       })
       .catch(err => {
@@ -60,8 +62,8 @@ function ACB2({ endpoint, audioSrc }) { // audioSrc는 오디오 파일의 소�
                 <p style={{ whiteSpace: 'pre-wrap' }}>{commentDataD}</p>
               </div>
           )}
-          <AudioPlayer src={audioSrc = './images/sourceVocal.wav'} start = {startAudio} />
-          <AudioPlayer src={audioSrc = './images/userVocal.wav'} start = {startAudio} />
+          <AudioPlayer src={audioSrc = './images/sourceVocal.wav'} start = {startAudioS} />
+          <AudioPlayer src={audioSrc = './images/userVocal.wav'} start = {startAudioU} />
           {/*<AudioPlayer src={audioSrc = './images/sourceVocal.wav'} initialStartTime={audioStartTime}/>*/}
         </div>
       )}
